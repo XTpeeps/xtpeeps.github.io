@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		恶意样本分析4-基础DLL分析 | 
+	 
+	x7peeps
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="keywords" />
+	 
+		<meta name="description" content="description" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="x7peeps" type="application/atom+xml">
+</head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">x7peeps</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		
+		<li class="menu-item">
+			<a href="https://github.com/xtpeeps" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
+										工具-Coremail日志分析筛选简易脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
+										工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/03/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-%E6%9C%AC%E5%9C%B0%E6%89%B9%E9%87%8Fping%E5%9F%9F%E5%90%8D%E8%84%9A%E6%9C%AC/">
+										工具-本地批量ping域名脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x00电子取证标准
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x00%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/2.0%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/">
+										2.0电子取证标准
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x01现场勘查
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x01%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/">
+										现场勘查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x02电子取证
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1磁盘镜像
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/">
+										Clonezilla
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/19/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Datanumen_disk_image/">
+										Datanumen_disk_image
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/EnCase_forensic_imager/">
+										EnCase_forensic_imager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/GetdataForensicImager/">
+										GetdataForensicImager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Guymager/">
+										Guymager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/dd:dc3dd(linux)/">
+										dd:dc3dd(linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/%E9%95%9C%E5%83%8F%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%90%84%E4%BA%A7%E5%93%81%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94/">
+										镜像类型及各产品特性对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2磁盘挂载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/Arsenal_Image_Mounter/">
+										Arsenal_Image_Mounter
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/13/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/GetData_Mount_Image_Pro/">
+										GetData_Mount_Image_Pro
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/OSFMount/">
+										OSFMount
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/mount_command/">
+										mount_command
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%B7%A5%E5%85%B7%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94%E8%A1%A8/">
+										磁盘挂载工具特点对比表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3文件恢复
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/DiskGenius(win)/">
+										DiskGenius(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/UFS%20explorer%20professional%20recovery(win:mac:linux)/">
+										UFS explorer professional recovery(win:mac:linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/WinHEX(win)/">
+										WinHEX(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/">
+										数据恢复工具性能对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4系统信息收集
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%9B%BD%E6%A0%87%E4%B8%AD%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E7%9B%B8%E5%85%B3%E8%A6%81%E6%B1%82%E5%8F%8A%E7%BB%BC%E8%BF%B0/">
+										国标中电子取证相关要求及综述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应关键证据检索提取
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE%E6%A3%80%E7%B4%A2%E6%8F%90%E5%8F%96/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
+										命令行历史记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										恶意样本分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/09/03/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-1-%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83/">
+										恶意样本分析-1-配置实验环境
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-2-%E5%9F%BA%E7%A1%80%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-2-基础静态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/20/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-3-%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-3-基础动态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-4-%E5%9F%BA%E7%A1%80DLL%E5%88%86%E6%9E%90/">
+										恶意样本分析-4-基础DLL分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-5-%E6%B1%87%E7%BC%96%E5%8F%8A%E5%8F%8D%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/">
+										恶意样本分析-5-汇编及反汇编基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/08/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-6-IDA%E4%BD%BF%E7%94%A8/">
+										恶意样本分析-6-IDA使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/23/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-AZORult%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%80%9F%E5%8A%A9%E9%82%AE%E4%BB%B6%E5%9C%A8%E9%87%8E%E4%BC%A0%E6%92%AD/">
+										样本分析-AZORult间谍软件借助邮件在野传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/12/12/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-TrojanBuzus%E2%80%9C%E9%9C%B8%E6%97%8F%E2%80%9D%E6%9C%A8%E9%A9%AC%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E4%BC%A0%E6%92%AD/">
+										样本分析-TrojanBuzus“霸族”木马通过邮件传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/13/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-%E9%82%AE%E4%BB%B6%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E4%B8%AD%E5%8F%91%E7%8E%B0%E6%96%B0MYMOOD%E8%A0%95%E8%99%AB%E4%BC%A0%E6%92%AD%E5%9C%B0%E5%9D%80/">
+										样本分析-邮件恶意样本中发现新MYMOOD蠕虫传播地址
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										情报跟踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/%E6%83%85%E6%8A%A5%E8%B7%9F%E8%B8%AA/%E6%83%85%E6%8A%A5-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies/">
+										情报-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										漏洞复现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/02/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2017-11882_Office%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%8F%8A%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/">
+										漏洞复现-CVE-2017-11882_Office远程代码执行漏洞及一点思考
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/13/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-0796_SMBGhost_Remote_Code_Execution/">
+										漏洞复现-CVE-2020-0796_SMBGhost_Remote_Code_Execution
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/07/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-14645_weblogic_T3%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E5%A4%8D%E6%B5%8B/">
+										漏洞复现-CVE-2020-14645_weblogic_T3反序列化RCE复测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/17/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-Vulhub%E5%AE%9E%E9%AA%8C_Weblogic_SSRF%E6%BC%8F%E6%B4%9E/">
+										漏洞复现-Vulhub实验_Weblogic_SSRF漏洞
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科普
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/10/%E7%A7%91%E6%99%AE/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%E4%B8%80%E5%AE%9A%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E5%BF%85%E5%81%9A%E4%BA%8B/">
+										手机丢失后一定要做的几件必做事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										红蓝对抗
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/02/20/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-Cobalt_Strike-x86_payload_%E5%88%86%E6%9E%90%E5%8F%8A%E6%B7%B7%E6%B7%86%E5%8A%A0%E5%AF%86/">
+										红蓝对抗-Cobalt_Strike-x86_payload_分析及混淆加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/08/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-%E5%90%8E%E6%B8%97%E9%80%8F_MYSQL%E6%8F%90%E6%9D%83%E5%B0%8F%E7%BB%93/">
+										红蓝对抗-后渗透_MYSQL提权小结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										页面篡改分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-EVAL%E5%8A%A0%E5%AF%86/">
+										页面篡改分析-EVAL加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-JS%E7%9A%84eval()%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-JS的eval()加密方式跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E5%9F%BA%E4%BA%8Esojson.v4%E6%B7%B7%E6%B7%86%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/">
+										页面篡改分析-基于sojson.v4混淆的页面篡思路分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E7%9F%AD%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%BA%A7%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-短链接多级跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%87%8D%E5%AE%9A%E5%90%91%E7%AF%A1%E6%94%B9%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90%E5%8F%8A%E5%9B%9E%E6%BA%AF%E8%BF%87%E7%A8%8B/">
+										页面篡改分析-重定向篡改事件的分析及回溯过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%A6%96%E6%AC%A1%E4%BC%9A%E8%AF%9D%E8%B7%B3%E8%BD%AC%E8%8F%A0%E8%8F%9C%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/">
+										页面篡改分析-首次会话跳转菠菜页面篡改分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/11/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90%E4%B8%80%E5%A4%84BoCai%E9%A1%B5%E9%9D%A2/">
+										页面篡改分析一处BoCai页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/11/%E7%BC%96%E7%A8%8B/python/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/">
+										scrapy爬虫框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	恶意样本分析-4-基础DLL分析
+</h1>
+<div class="article-meta">
+	
+	<span>x7</span>
+	<span>2019-09-25 19:24:00</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<p><img src="http://blogimage.xtpeeps.cn/20190923224925.png-A"><br>当恶意代码打包进dll，需要对其进行一定量的定性分析，除了平台的手段，这里还有一些基础的dll分析手段。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>本系列主要内容来自《K A, Monnappa. Learning Malware Analysis: Explore the concepts, tools, and techniques to analyze and investigate Windows malware (pp. 95-96). Packt Publishing. Kindle 版本. 》的记录</p>
+</blockquote>
+<h2 id="DLL分析"><a href="#DLL分析" class="headerlink" title="DLL分析"></a>DLL分析</h2><p>cff explorer tool    </p>
+<p>If you wish to know more about Dynamic-Link Libraries, read the following documents: <a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/help/815065/what-is-a-dll">https://support.microsoft.com/en-us/help/815065/what-is-a-dll</a> and <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681914(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/ms681914(v=vs.85).aspx</a>.</p>
+<h3 id="为什么攻击者使用dll"><a href="#为什么攻击者使用dll" class="headerlink" title="为什么攻击者使用dll"></a>为什么攻击者使用dll</h3><ol>
+<li>dll不能双击运行，需要宿主进程执行。将恶意代码打包进dll，恶意程序作者能够使用任何进程加载他的dll，包括合法的进程例如explorer.exe、winlogon.exe等。这些技术可以帮助隐藏攻击者的行为，并且所有恶意行为将会隐藏在宿主程序下执行。</li>
+<li>将dll注入到已经运行的程序将可以帮助攻击者长时间驻留在系统</li>
+<li>当dll被一个程序加载进内存空间，dll还拥有整个程序内存的访问权限。从而给它操纵程序功能的能力。例如，攻击者可以注入dll到浏览器程序进程，偷取其重定向API函数的凭证。</li>
+</ol>
+<h3 id="使用rundll32-exe分析dll"><a href="#使用rundll32-exe分析dll" class="headerlink" title="使用rundll32.exe分析dll"></a>使用rundll32.exe分析dll</h3><p>使用动态分析对于判断恶意程序的行为至关重要。对于前面提到的dll需要一个程序进程运行。在windows中rundll32.exe能够被用来运行dll调用一个外部函数。</p>
+<pre><code>rundll32.exe &lt;full path to dll&gt;,&lt;export function&gt;,optional arguments&gt;
+</code></pre>
+<p>与rundll32.exe相关的参数：<br>full path to dll：指定的dll地址，这个地址不能包含空或者特殊字符<br>export function:这个函数在dll中并且能够在dll加载之后调用<br>optional arguments:可选参数<br>逗号：用来表示dll中的某函数</p>
+<h4 id="1-rundll32-exe工作原理"><a href="#1-rundll32-exe工作原理" class="headerlink" title="1. rundll32.exe工作原理"></a>1. rundll32.exe工作原理</h4><p>明白rundll32工作原理对于在执行dll时避免一些错误非常重要。当你运行rundll32.exe的时候使用命令行+参数形式执行，当执行rundll32.exe时发生的是:</p>
+<ol>
+<li>命令行参数通过rundll32.exe被首先执行；如果语法正确，则rundll32.exe执行</li>
+<li>如果语法正确，执行加载提供的dll。作为加载dll的结果，dll切入口函数被执行（这在调用住dllmain）。大部分恶意程序实现他们的恶意代码通过dllmain函数。</li>
+<li>在架在dll之后，获取外部函数及调用函数地址。如果函数地址不能被确认，则rundll32.exe中断。</li>
+<li>如果可选参数提供，则可选函数将提供额外的扩展函数调用</li>
+</ol>
+<p>rundll32详细信息工作原理详解: <a target="_blank" rel="noopener" href="https://support.microsoft.com/en-in/help/164787/info-windows-rundll-and-rundll32-interface">https://support.microsoft.com/en-in/help/164787/info-windows-rundll-and-rundll32-interface</a>.</p>
+<h4 id="2-使用rundll32-exe运行dll几个场景"><a href="#2-使用rundll32-exe运行dll几个场景" class="headerlink" title="2. 使用rundll32.exe运行dll几个场景"></a>2. 使用rundll32.exe运行dll几个场景</h4><p>恶意样本时常调用dll运行，下面几个场景可以帮助识别dll的运行路径</p>
+<h5 id="01-无函数输出的dll分析"><a href="#01-无函数输出的dll分析" class="headerlink" title="01.无函数输出的dll分析"></a>01.无函数输出的dll分析</h5><p>当dll被调用，dllmain主函数作为入口函数被调用。攻击者在dllmain函数中直接实现键盘记录，信息窃取等操作，期间无任何函数输出。</p>
+<p><img src="http://blogimage.xtpeeps.cn/20190909165549.png-A"></p>
+<blockquote>
+<p>可能会遇到c:\rundll32.exe c:\samples\aa.dll报错不执行可尝试c:\rundll32.exe c:\samples\aa.dll,test尽管报错但可以执行</p>
+</blockquote>
+<h5 id="02-分析一个包含输出的dll"><a href="#02-分析一个包含输出的dll" class="headerlink" title="02. 分析一个包含输出的dll"></a>02. 分析一个包含输出的dll</h5><p>使用cff，可以看到出口函数表。</p>
+<p><img src="http://blogimage.xtpeeps.cn/20190909165436.png-A">可能会遇到C:&gt;rundll32.exe c:\samples\obe.dll,test运行dll但是dll没有任何行为的时候考虑dll入口函数没有实现任何函数。如果使用c:\rundll32.exe c:\samples\obe.dll,dllregisterserver直接调用可以触发cc回链请求，因此可以推断出这个函数实现网络连接功能。</p>
+<p>这里有一个相关fuzz恶意dll函数的工具可以用来方便检测：<br>DLLRunner (<a target="_blank" rel="noopener" href="https://github.com/Neo23x0/DLLRunner">https://github.com/Neo23x0/DLLRunner</a>)<br>DLLRunner是一个智能DLL执行脚本，用于沙盒系统中的恶意软件分析。<br>它不是通过“rundll32.exe file.dll”执行DLL文件，而是分析PE并按名称或序号执行所有导出的函数，以确定其中一个函数是否导致恶意活动。</p>
+<h5 id="03-分析带参数输出的dll"><a href="#03-分析带参数输出的dll" class="headerlink" title="03. 分析带参数输出的dll"></a>03. 分析带参数输出的dll</h5><blockquote>
+<p>这里有个典型的案例，样本使用powerpoit加密尝试绕过安全检测分析：<a target="_blank" rel="noopener" href="https://securingtomorrow.mcafee.com/mcafee-labs/threat-actors-use-encrypted-office-binary-format-evade-detection/">https://securingtomorrow.mcafee.com/mcafee-labs/threat-actors-use-encrypted-office-binary-format-evade-detection/</a><br><img src="http://blogimage.xtpeeps.cn/20190909170518.png-A"></p>
+</blockquote>
+<p>一个dll（searchcache.dll）由出口函数，具有删除文件功能函数的_flushfile@16函数组成。这个出口函数能够接收一个参数，用来接收要删除的文件：（cff图）<br><img src="http://blogimage.xtpeeps.cn/20190909165400.png-A"></p>
+<p>测试其函数：<br>rundll32.exe c:\samples\SearchCache.dll,_flushfile@16 C:\samples\file_to_delete.txt</p>
+<p>noriben日志可以记录rundll32.exe删除操作。<br>Processes Created:<br>[CreateProcess] cmd.exe:1100 &gt; “rundll32.exe  c:\samples\SearchCache.dll,_flushfile@16 C:\samples\file_to_delete.txt” [Child PID: 3348]<br>File Activity:<br>[DeleteFile] rundll32.exe:3348 &gt; C:\samples\file_to_delete.txt</p>
+<h4 id="3-通过进程检查分析dll"><a href="#3-通过进程检查分析dll" class="headerlink" title="3. 通过进程检查分析dll"></a>3. 通过进程检查分析dll</h4><p>大多数时候，使用rundll32.exe运行dll是没问题的，但是如果他们只运行在特定的程序下（explorer.exe或者iexplore.exe)等的DLL检查，当样本程序发现他运行在其他进程中他们的行为可能发生改变或者杀死自己的进程。在这种情况下，需要将dll注入到指定程序以触发其行为。</p>
+<h4 id="RemoteDLL"><a href="#RemoteDLL" class="headerlink" title="RemoteDLL"></a>RemoteDLL</h4><p>RemoteDll(<a target="_blank" rel="noopener" href="http://securityxploded.com/remotedll.php">http://securityxploded.com/remotedll.php</a>)<br>允许DLL注入任何正在运行的进程。它允许使用3种不同的方式注入dll。</p>
+<h5 id="TDSS-Rootkit一个组件tdl-dll样本分析"><a href="#TDSS-Rootkit一个组件tdl-dll样本分析" class="headerlink" title="TDSS Rootkit一个组件tdl.dll样本分析"></a>TDSS Rootkit一个组件tdl.dll样本分析</h5><p>这个样本不包含任何输出；所有的恶意代码都在dll的入口函数中实现。使用下面的命令执行会导致一个DLL初始化例程报错，说明程序没有正确执行：<br><img src="http://blogimage.xtpeeps.cn/20190923224925.png-A"><br>通过静态分析代码，发现DLL入口函数包含一个确认检查（运行在spoolsv.exe下面）如果运行在其他程序下，dll就会初始化例程错误。<br><img src="http://blogimage.xtpeeps.cn/20200405002012.png-A"><br>为了触发行为，恶意DLL必须注入到spoolsv.exe进程中。之后可以通过捕捉正常观察到程序操作。</p>
+<blockquote>
+<p>病毒分析过程中，可能会遇到一些dll只有当其作为服务时才会运行。这种DLL成为服务DLL。对于这种DLL的分析需要有windows API 相关知识基础。（后面会提到）</p>
+</blockquote>
+<p>基于基础动态分析有其局限，为了获取更深的洞察，需要代码分析（逆向分析）<br>例如，大多数样本使用c2服务加密通信。使用动态分析我们能够确定加密通信，但是无法获得其通信内容，因此我们需要了解如何进行代码分析。</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2019/10/13/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-%E9%82%AE%E4%BB%B6%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E4%B8%AD%E5%8F%91%E7%8E%B0%E6%96%B0MYMOOD%E8%A0%95%E8%99%AB%E4%BC%A0%E6%92%AD%E5%9C%B0%E5%9D%80/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  样本分析-邮件恶意样本中发现新MYMOOD蠕虫传播地址
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-5-%E6%B1%87%E7%BC%96%E5%8F%8A%E5%8F%8D%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/">
+                恶意样本分析-5-汇编及反汇编基础
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2016-<span id="footerYear"></span> 
+	<a href="/">x7</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

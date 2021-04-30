@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		2.0电子取证标准 | 
+	 
+	x7peeps
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="keywords" />
+	 
+		<meta name="description" content="description" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="x7peeps" type="application/atom+xml">
+</head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">x7peeps</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		
+		<li class="menu-item">
+			<a href="https://github.com/xtpeeps" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
+										工具-Coremail日志分析筛选简易脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
+										工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/03/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-%E6%9C%AC%E5%9C%B0%E6%89%B9%E9%87%8Fping%E5%9F%9F%E5%90%8D%E8%84%9A%E6%9C%AC/">
+										工具-本地批量ping域名脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x00电子取证标准
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x00%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/2.0%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/">
+										2.0电子取证标准
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x01现场勘查
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x01%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/">
+										现场勘查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x02电子取证
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1磁盘镜像
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/">
+										Clonezilla
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/19/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Datanumen_disk_image/">
+										Datanumen_disk_image
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/EnCase_forensic_imager/">
+										EnCase_forensic_imager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/GetdataForensicImager/">
+										GetdataForensicImager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Guymager/">
+										Guymager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/dd:dc3dd(linux)/">
+										dd:dc3dd(linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/%E9%95%9C%E5%83%8F%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%90%84%E4%BA%A7%E5%93%81%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94/">
+										镜像类型及各产品特性对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2磁盘挂载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/Arsenal_Image_Mounter/">
+										Arsenal_Image_Mounter
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/13/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/GetData_Mount_Image_Pro/">
+										GetData_Mount_Image_Pro
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/OSFMount/">
+										OSFMount
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/mount_command/">
+										mount_command
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%B7%A5%E5%85%B7%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94%E8%A1%A8/">
+										磁盘挂载工具特点对比表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3文件恢复
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/DiskGenius(win)/">
+										DiskGenius(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/UFS%20explorer%20professional%20recovery(win:mac:linux)/">
+										UFS explorer professional recovery(win:mac:linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/WinHEX(win)/">
+										WinHEX(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/">
+										数据恢复工具性能对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4系统信息收集
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%9B%BD%E6%A0%87%E4%B8%AD%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E7%9B%B8%E5%85%B3%E8%A6%81%E6%B1%82%E5%8F%8A%E7%BB%BC%E8%BF%B0/">
+										国标中电子取证相关要求及综述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应关键证据检索提取
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE%E6%A3%80%E7%B4%A2%E6%8F%90%E5%8F%96/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
+										命令行历史记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										恶意样本分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/09/03/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-1-%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83/">
+										恶意样本分析-1-配置实验环境
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-2-%E5%9F%BA%E7%A1%80%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-2-基础静态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/20/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-3-%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-3-基础动态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-4-%E5%9F%BA%E7%A1%80DLL%E5%88%86%E6%9E%90/">
+										恶意样本分析-4-基础DLL分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-5-%E6%B1%87%E7%BC%96%E5%8F%8A%E5%8F%8D%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/">
+										恶意样本分析-5-汇编及反汇编基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/08/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-6-IDA%E4%BD%BF%E7%94%A8/">
+										恶意样本分析-6-IDA使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/23/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-AZORult%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%80%9F%E5%8A%A9%E9%82%AE%E4%BB%B6%E5%9C%A8%E9%87%8E%E4%BC%A0%E6%92%AD/">
+										样本分析-AZORult间谍软件借助邮件在野传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/12/12/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-TrojanBuzus%E2%80%9C%E9%9C%B8%E6%97%8F%E2%80%9D%E6%9C%A8%E9%A9%AC%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E4%BC%A0%E6%92%AD/">
+										样本分析-TrojanBuzus“霸族”木马通过邮件传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/13/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-%E9%82%AE%E4%BB%B6%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E4%B8%AD%E5%8F%91%E7%8E%B0%E6%96%B0MYMOOD%E8%A0%95%E8%99%AB%E4%BC%A0%E6%92%AD%E5%9C%B0%E5%9D%80/">
+										样本分析-邮件恶意样本中发现新MYMOOD蠕虫传播地址
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										情报跟踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/%E6%83%85%E6%8A%A5%E8%B7%9F%E8%B8%AA/%E6%83%85%E6%8A%A5-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies/">
+										情报-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										漏洞复现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/02/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2017-11882_Office%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%8F%8A%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/">
+										漏洞复现-CVE-2017-11882_Office远程代码执行漏洞及一点思考
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/13/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-0796_SMBGhost_Remote_Code_Execution/">
+										漏洞复现-CVE-2020-0796_SMBGhost_Remote_Code_Execution
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/07/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-14645_weblogic_T3%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E5%A4%8D%E6%B5%8B/">
+										漏洞复现-CVE-2020-14645_weblogic_T3反序列化RCE复测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/17/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-Vulhub%E5%AE%9E%E9%AA%8C_Weblogic_SSRF%E6%BC%8F%E6%B4%9E/">
+										漏洞复现-Vulhub实验_Weblogic_SSRF漏洞
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科普
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/10/%E7%A7%91%E6%99%AE/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%E4%B8%80%E5%AE%9A%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E5%BF%85%E5%81%9A%E4%BA%8B/">
+										手机丢失后一定要做的几件必做事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										红蓝对抗
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/02/20/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-Cobalt_Strike-x86_payload_%E5%88%86%E6%9E%90%E5%8F%8A%E6%B7%B7%E6%B7%86%E5%8A%A0%E5%AF%86/">
+										红蓝对抗-Cobalt_Strike-x86_payload_分析及混淆加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/08/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-%E5%90%8E%E6%B8%97%E9%80%8F_MYSQL%E6%8F%90%E6%9D%83%E5%B0%8F%E7%BB%93/">
+										红蓝对抗-后渗透_MYSQL提权小结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										页面篡改分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-EVAL%E5%8A%A0%E5%AF%86/">
+										页面篡改分析-EVAL加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-JS%E7%9A%84eval()%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-JS的eval()加密方式跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E5%9F%BA%E4%BA%8Esojson.v4%E6%B7%B7%E6%B7%86%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/">
+										页面篡改分析-基于sojson.v4混淆的页面篡思路分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E7%9F%AD%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%BA%A7%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-短链接多级跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%87%8D%E5%AE%9A%E5%90%91%E7%AF%A1%E6%94%B9%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90%E5%8F%8A%E5%9B%9E%E6%BA%AF%E8%BF%87%E7%A8%8B/">
+										页面篡改分析-重定向篡改事件的分析及回溯过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%A6%96%E6%AC%A1%E4%BC%9A%E8%AF%9D%E8%B7%B3%E8%BD%AC%E8%8F%A0%E8%8F%9C%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/">
+										页面篡改分析-首次会话跳转菠菜页面篡改分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/11/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90%E4%B8%80%E5%A4%84BoCai%E9%A1%B5%E9%9D%A2/">
+										页面篡改分析一处BoCai页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/11/%E7%BC%96%E7%A8%8B/python/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/">
+										scrapy爬虫框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	2.0电子取证标准
+</h1>
+<div class="article-meta">
+	
+	<span>x7</span>
+	<span>2021-04-24 17:56:41</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="第一部分：国内的相关标准规范"><a href="#第一部分：国内的相关标准规范" class="headerlink" title="第一部分：国内的相关标准规范"></a>第一部分：国内的相关标准规范</h1><p>原文：微信公众号“cnforensics”，微信公众号“取证杂谈”</p>
+<h2 id="国家标准（4）"><a href="#国家标准（4）" class="headerlink" title="国家标准（4）"></a>国家标准（4）</h2><ol>
+<li>GB/T 29360-2012 《电子物证数据恢复检验规程》<a target="_blank" rel="noopener" href="http://www.zjcfs.com/style/download/%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83/%E5%A3%B0%E5%83%8F%E7%94%B5%E5%AD%90/GBT29360-2012%E7%94%B5%E5%AD%90%E7%89%A9%E8%AF%81%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%A3%80%E9%AA%8C%E8%A7%84%E7%A8%8B.pdf">下载</a></li>
+<li>GB/T 29361-2012 《电子物证文件一致性检验规程》<a target="_blank" rel="noopener" href="https://easyforensics.com/media/yizhixing.pdf">下载</a></li>
+<li>GB/T 29362-2012 《电子物证数据搜索检验规程》<a target="_blank" rel="noopener" href="http://www.zjcfs.com/style/download/%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83/%E5%A3%B0%E5%83%8F%E7%94%B5%E5%AD%90/GBT29362-2012%E7%94%B5%E5%AD%90%E7%89%A9%E8%AF%81%E6%95%B0%E6%8D%AE%E6%90%9C%E7%B4%A2%E6%A3%80%E9%AA%8C%E8%A7%84%E7%A8%8B.pdf">下载</a></li>
+<li>GB/T 31500-2015 《信息安全技术 存储介质数据恢复服务要求》<a target="_blank" rel="noopener" href="http://www.匠工.com/u/1006/1063-d19f52c45c744eff2798e7f2db6de711.pdf">下载</a></li>
+<li>GB/T 39321-2020 《电子合同取证流程规范》即将实施状态 <a target="_blank" rel="noopener" href="http://c.gb688.cn/bzgk/gb/showGb?type=online&hcno=E728DB555ADF862CEB7B9B547D51B3F1#page=16&zoom=auto,-130,757">在线</a></li>
+</ol>
+<h2 id="公共安全标准（39）"><a href="#公共安全标准（39）" class="headerlink" title="公共安全标准（39）"></a>公共安全标准（39）</h2><ol>
+<li>GA/T 754-2008 《电子数据存储介质复制工具要求及检测方法》</li>
+<li>GA/T 755-2008 《电子数据存储介质写保护设备要求及检测方法》</li>
+<li>GA/T 756-2008 《数字化设备证据数据发现提取固定方法》</li>
+<li>GA/T 757-2008 《程序功能检验方法》</li>
+<li>GA/T 825-2009 《电子物证数据搜索检验技术规范》（已废止）</li>
+<li>GA/T 826-2009 《电子物证数据恢复检验技术规范》（已废止）</li>
+<li>GA/T 827-2009 《电子物证文件一致性检验技术规范》（已废止）</li>
+<li>GA/T 828-2009 《电子物证软件功能检验技术规范》</li>
+<li>GA/T 829-2009 《电子物证软件一致性检验技术规范》</li>
+<li>GA/T 976-2012 《电子数据法庭科学鉴定通用方法》</li>
+<li>GA/T 977-2012 《取证与鉴定文书电子签名》</li>
+<li>GA/T 978-2012 《网络游戏私服检验技术方法》</li>
+<li>GA/T 1069-2013 《法庭科学电子物证手机检验技术规范》</li>
+<li>GA/T 1070-2013 《法庭科学计算机开关机时间检验技术规范》</li>
+<li>GA/T 1071-2013 《法庭科学电子物证Windows操作系统日志检验技术规范》</li>
+<li>GA/T 1170-2014 《移动终端取证检验方法》</li>
+<li>GA/T 1171-2014 《芯片相似性比对检验方法》</li>
+<li>GA/T 1172-2014 《电子邮件检验技术方法》</li>
+<li>GA/T 1173-2014 《即时通讯记录检验技术方法》</li>
+<li>GA/T 1174-2014 《电子证据数据现场获取通用方法》</li>
+<li>GA/T 1175-2014 《软件相似性检验技术方法》</li>
+<li>GA/T 1176-2014 《网页浏览器历史数据检验技术方法》</li>
+<li>GA/T 1474-2018 《法庭科学计算机系统用户操作行为检验技术规范》</li>
+<li>GA/T 1475-2018 《法庭科学电子物证监控录像机检验技术规范》</li>
+<li>GA/T 1476-2018 《法庭科学远程主机数据获取技术规范》</li>
+<li>GA/T 1477-2018 《法庭科学计算机系统接入外部设备使用痕迹检验技术规范》</li>
+<li>GA/T 1478-2018 《法庭科学网站数据获取技术规范》</li>
+<li>GA/T 1479-2018 《法庭科学电子物证伪基站电子数据检验技术规范》</li>
+<li>GA/T 1480-2018 《法庭科学计算机操作系统仿真检验技术规范》</li>
+<li>GA/T 1554-2019 《法庭科学电子物证检验材料保存技术规范》</li>
+<li>GA/T 1564-2019 《法庭科学 现场勘查电子物证提取技术规范》</li>
+<li>GA/T 1568-2019 《法庭科学 电子物证检验术语》</li>
+<li>GA/T 1569-2019 《法庭科学 电子物证检验实验室建设规范》</li>
+<li>GA/T 1570-2019 《法庭科学 数据库数据真实性检验技术规范》</li>
+<li>GA/T 1571-2019 《法庭科学 Android系统应用程序功能检验方法》</li>
+<li>GA/T 1572-2019 《法庭科学 移动终端地理位置信息检验技术方法》</li>
+<li>GA/T 1663-2019 《法庭科学 Linux操作系统日志检验技术规范》</li>
+<li>GA/T 1664-2019 《法庭科学 MS SQL Server数据库日志检验技术规范》</li>
+<li>GA/T 1713-2020 《法庭科学 破坏性程序检验技术方法》</li>
+</ol>
+<h2 id="司法鉴定技术规范（15）"><a href="#司法鉴定技术规范（15）" class="headerlink" title="司法鉴定技术规范（15）"></a>司法鉴定技术规范（15）</h2><ol>
+<li>SF/Z JD0400001-2014 《电子数据司法鉴定通用实施规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/3/8%E7%94%B5%E5%AD%90%E6%95%B0%E6%8D%AE%E5%8F%B8%E6%B3%95%E9%89%B4%E5%AE%9A%E9%80%9A%E7%94%A8%E5%AE%9E%E6%96%BD%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/Z JD0401001-2014 《电子数据复制设备鉴定实施规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/3/9%E7%94%B5%E5%AD%90%E6%95%B0%E6%8D%AE%E5%A4%8D%E5%88%B6%E8%AE%BE%E5%A4%87%E9%89%B4%E5%AE%9A%E5%AE%9E%E6%96%BD%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/Z JD0402001-2014 《电子邮件鉴定实施规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/3/10%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E9%89%B4%E5%AE%9A%E5%AE%9E%E6%96%BD%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/Z JD0403001-2014 《软件相似性鉴定实施规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/3/11%E8%BD%AF%E4%BB%B6%E7%9B%B8%E4%BC%BC%E6%80%A7%E9%89%B4%E5%AE%9A%E5%AE%9E%E6%96%BD%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/Z JD0400002-2015 《电子数据证据现场获取通用规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/4/27%E7%94%B5%E5%AD%90%E6%95%B0%E6%8D%AE%E8%AF%81%E6%8D%AE%E7%8E%B0%E5%9C%BA%E8%8E%B7%E5%8F%96%E9%80%9A%E7%94%A8%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/Z JD0401002-2015 《手机电子数据提取操作规范》<a target="_blank" rel="noopener" href="http://www.moj.gov.cn/government_service/download/file/file/20170901/4e17e890086b4d969d714e03456b4b29.pdf">下载</a></li>
+<li>SF/Z JD0402002-2015 《数据库数据真实性鉴定规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/4/24%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E7%9C%9F%E5%AE%9E%E6%80%A7%E9%89%B4%E5%AE%9A%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/Z JD0402003-2015 《即时通讯记录检验操作规范》<a target="_blank" rel="noopener" href="http://www.moj.gov.cn/government_service/download/file/file/20170901/54030516e9634852b11583b7a999392b.pdf">下载</a></li>
+<li>SF/Z JD0403002-2015 《破坏性程序检验操作规范》<a target="_blank" rel="noopener" href="http://www.moj.gov.cn/government_service/download/file/file/20170901/78d4d6cd1dbd427fbd41a2613dd89691.pdf">下载</a></li>
+<li>SF/Z JD0403003-2015 《计算机系统用户操作行为检验规范》<a target="_blank" rel="noopener" href="http://www.moj.gov.cn/government_service/download/file/file/20170901/1320e071fcad4b4fa47a8290989ed797.pdf">下载</a></li>
+<li>SF/Z JD0402004-2018 《电子文档真实性鉴定技术规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/6/32.pdf">下载</a></li>
+<li>SF/Z JD0403004-2018 《软件功能鉴定技术规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/6/33.pdf">下载</a></li>
+<li>SF/Z JD0404001-2018 《伪基站检验操作规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/Files/jsgf/6/34.pdf">下载</a></li>
+<li>SF/T 0075—2020 《网络文学作品相似性检验技术规范》<a target="_blank" rel="noopener" href="http://www.moj.gov.cn/news/download/file/file/20200604/1591255954644046011.pdf">下载</a></li>
+<li>SF/T 0076-2020 《电子数据存证技术规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/files/hb2020/0076f-%E7%94%B5%E5%AD%90%E6%95%B0%E6%8D%AE%E5%AD%98%E8%AF%81%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+<li>SF/T 0077-2020《汽车电子数据检验技术规范》<a target="_blank" rel="noopener" href="http://www.ssfjd.com/files/hb2020/0077f-%E6%B1%BD%E8%BD%A6%E7%94%B5%E5%AD%90%E6%95%B0%E6%8D%AE%E6%A3%80%E9%AA%8C%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83.pdf">下载</a></li>
+</ol>
+<h1 id="其他文件"><a href="#其他文件" class="headerlink" title="其他文件"></a>其他文件</h1><ol>
+<li>《中华全国律师协会律师办理电子数据证据业务操作指引》</li>
+</ol>
+<h1 id="第二部分：国外的相关标准规范"><a href="#第二部分：国外的相关标准规范" class="headerlink" title="第二部分：国外的相关标准规范"></a>第二部分：国外的相关标准规范</h1><h2 id="ISO-IEC电子数据取证标准体系"><a href="#ISO-IEC电子数据取证标准体系" class="headerlink" title="ISO/IEC电子数据取证标准体系"></a>ISO/IEC电子数据取证标准体系</h2><ol>
+<li>ISO/IEC 27035：2011《信息技术-安全技术-信息安全事件管理》</li>
+<li>ISO/IEC 27037:2012《信息技术-安全技术-电子证据识别. 收集. 获取和保存指南》</li>
+<li>ISO/IEC 27038：2014《信息技术-安全技术-数字化修订详述》</li>
+<li>ISO/IEC 27040：2015《信息技术-安全技术-存储安全》</li>
+<li>ISO/IEC 27041《信息技术-安全技术-调查方法适宜性充分性保障指南》</li>
+<li>ISO/IEC 27042《信息技术-安全技术-电子证据分析解释指南》</li>
+<li>ISO/IEC 27043:2015 《信息技术-安全技术-信息技术-安全技术-调查原则和过程》</li>
+<li>ISO/IEC 27044《信息技术-安全技术-安全信息和事件管理指南》</li>
+<li>ISO/IEC 27050《信息技术-安全技术-电子证据发现》</li>
+<li>ISO/IEC 30121：2015《信息技术-电子数据取证风险架构管理》</li>
+</ol>
+<h2 id="SWGDE-手机"><a href="#SWGDE-手机" class="headerlink" title="SWGDE-手机"></a>SWGDE-手机</h2><ol>
+<li>SWGDE Best Practices for Chip-Off [2016-02-08 V1.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Chip-Off)</li>
+<li>SWGDE Best Practices for Collection of Damaged Mobile Devices [2016-02-08 V1.1下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Collection of Damaged Mobile Devices)</li>
+<li>SWGDE Best Practices for Examining Mobile Phones Using JTAG [2015-09-29 V1.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Examining Mobile Phones Using JTAG)</li>
+<li>SWGDE Best Practices for Mobile Phone Forensics [2013-02-11 V2.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Mobile Phone Forensics)</li>
+<li>SWGDE Core Competencies for Mobile Phone Forensics [2013-02-11 V1.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Core Competencies for Mobile Phone Forensics)</li>
+</ol>
+<h2 id="SWGDE-计算机"><a href="#SWGDE-计算机" class="headerlink" title="SWGDE-计算机"></a>SWGDE-计算机</h2><ol>
+<li>SWGDE Best Practices for Computer Forensic Acquisitions [2018-04-25 V1.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Computer Forensic Acquisitions)</li>
+<li>SWGDE Capture of Live Systems [2014-09-05 V2.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Capture of Live Systems)</li>
+<li>SWGDE Best Practices for Handling Damaged Hard Drives [2014-09-05 V1.0下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Handling Damaged Hard Drives)</li>
+<li>SWGDE Best Practices for Computer Forensics [2014-09-05 V3.1下载](<a target="_blank" rel="noopener" href="https://www.swgde.org/documents/Current">https://www.swgde.org/documents/Current</a> Documents/SWGDE Best Practices for Computer Forensics)</li>
+</ol>
+<h2 id="美国国家标准于技术研究院（NIST）"><a href="#美国国家标准于技术研究院（NIST）" class="headerlink" title="美国国家标准于技术研究院（NIST）"></a>美国国家标准于技术研究院（NIST）</h2><ol>
+<li>Guidelines on PDA Forensics <a target="_blank" rel="noopener" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-72.pdf">下载</a><br>2004年11月1日发布，NIST SP 800-72</li>
+<li>Guide to Integrating Forensic Techniques into Incident Response <a target="_blank" rel="noopener" href="https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-86.pdf">下载</a><br>2006年9月1日发布，NIST SP 800-86</li>
+<li>Guidelines on Mobile Device Forensic <a target="_blank" rel="noopener" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-101r1.pdf">下载</a><br>2014年5月15日发布，NIST SP 800-101 Revision 1</li>
+</ol>
+<h2 id="美国联邦司法部"><a href="#美国联邦司法部" class="headerlink" title="美国联邦司法部"></a>美国联邦司法部</h2><ol>
+<li>Digital Evidence in the Courtroom A Guide for Law Enforcement and Prosecutors <a target="_blank" rel="noopener" href="https://www.ncjrs.gov/pdffiles1/nij/211314.pdf">下载</a><br>《法庭中的数据证据：执法部门及检察官操作守则》</li>
+<li>Electronic Crime Scene Investigation An On-the-Scene Reference for First Responders <a target="_blank" rel="noopener" href="https://www.ncjrs.gov/pdffiles1/nij/227050.pdf">下载</a><br>《电子犯罪现场调查：第一响应者的现场参考》</li>
+<li>Electronic CrimeScene Investigation A Guide for First Responders <a target="_blank" rel="noopener" href="https://www.ncjrs.gov/pdffiles1/nij/219941.pdf">第二版下载</a><br>《电子犯罪现场调查：第一响应者指南》</li>
+<li>Forensic Examination of Digital Evidence A Guide for Law Enforcement <a target="_blank" rel="noopener" href="https://www.ncjrs.gov/pdffiles1/nij/199408.pdf">下载</a><br>《数字证据的司法审查：执法人员指南》</li>
+<li>investigations involving the internet and computer networks <a target="_blank" rel="noopener" href="https://www.ncjrs.gov/pdffiles1/nij/210798.pdf">下载</a><br>《涉及互联网和计算机网络的调查》</li>
+</ol>
+<h2 id="美国试验与材料学会国际组织"><a href="#美国试验与材料学会国际组织" class="headerlink" title="美国试验与材料学会国际组织"></a>美国试验与材料学会国际组织</h2><ol>
+<li>Standard Guide for Education and Training in Computer Forensics <a target="_blank" rel="noopener" href="https://www.astm.org/Standards/E2678.htm">查看详情</a><br>ASTM E2678-09(2014)，2014年最后修订</li>
+<li>StandardPractice for Computer Forensics <a target="_blank" rel="noopener" href="https://www.astm.org/Standards/E2763.htm">查看详情</a><br>ASTM E2763-10，2010年最后修订</li>
+<li>Standard Guide for Forensic Digital Image Processing <a target="_blank" rel="noopener" href="https://www.astm.org/Standards/E2825.htm">查看详情</a><br>ASTM E2825-18，2018年最后修订</li>
+<li>Standard Guide for Establishing Confidence in Digital Forensic Results by Error Mitigation Analysis <a target="_blank" rel="noopener" href="https://www.astm.org/Standards/E3016.htm">查看详情</a><br>ASTM E3016-15e1，2015年最后修订</li>
+<li>Standard Guide for Core Competencies for Mobile Phone Forensics <a target="_blank" rel="noopener" href="https://www.astm.org/Standards/E3046.htm">查看详情</a><br>ASTM E3046-15，2015年最后修订</li>
+<li>Standard Practice for Examining Magnetic Card Readers <a target="_blank" rel="noopener" href="https://www.astm.org/Standards/E3017.htm">查看详情</a><br>ASTM E3017-15，2015年最后修订</li>
+</ol>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<li>Good Practice Guide for Digital Evidence <a target="_blank" rel="noopener" href="http://www.digital-detective.net/digital-forensics-documents/ACPO_Good_Practice_Guide_for_Digital_Evidence_v5.pdf">下载</a><br>英国警察协会（ACPO）《数字证据良好操作指南》</li>
+<li>Best Practices For Seizing Electronic Evidence v.3 - A Pocket Guidefor First Responders <a target="_blank" rel="noopener" href="http://www.crime-scene-investigator.net/SeizingElectronicEvidence.pdf">下载</a><br>美国特勤局，2007年发布</li>
+<li>Searching and Seizing Computers and Obtaining Electronic Evidence in Criminal Investigations <a target="_blank" rel="noopener" href="https://www.justice.gov/sites/default/files/criminal-ccips/legacy/2015/01/14/ssmanual2009.pdf">下载</a></li>
+</ol>
+<h1 id="第三部分：参考资料及说明"><a href="#第三部分：参考资料及说明" class="headerlink" title="第三部分：参考资料及说明"></a>第三部分：参考资料及说明</h1><ol>
+<li><a target="_blank" rel="noopener" href="http://www.cnforensics.com/">取证中国论坛</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.moj.gov.cn/">中国司法部网站</a></li>
+<li>微信公众号“电子数据取证与鉴定”</li>
+<li><a target="_blank" rel="noopener" href="https://www.ncjrs.gov/">美国联邦司法部网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.swgde.org/">数字证据科学工作组</a></li>
+<li><a target="_blank" rel="noopener" href="https://csrc.nist.gov/publications">美国国家标准于技术研究院</a></li>
+<li>百度百科“美国电子数据取证标准”词条<br><strong>没有附下载连接的部分标准规范可邮件联系我获取，详见“关于”页面</strong></li>
+</ol>
+<ul>
+<li>本文最初发布在微信公众号“cnforensics”，发布时间为2016年5月23日。</li>
+<li>2018年3月11日发布在本人微信公众号“取证杂谈”。</li>
+<li>2018年9月29日更新内容：更新了部分失效的下载链接</li>
+<li>2018年11月6日更新内容：增加了2018年5个公共安全标准</li>
+<li>2018年11月9日更新内容：增加了遗漏的GA/T 1475-2018 及GA/T 1480-2018两个标准，增加了2018年3个司法鉴定技术规范</li>
+<li>2019年5月29日更新内容：更新并补全了司法鉴定技术规范的下载链接</li>
+<li>2019年7月4日更新内容：增加了公共安全行业标准GA/T 1554-2019</li>
+<li>2019年7月27日更新内容：增加了GA/T 1564-2019等6个公共安全行业标准</li>
+<li>2019年10月24日更新内容：增加了GA/T 1663-2019和GA/T 1664-2019两个公共安全行业标准</li>
+<li>2020年6月25日更新内容：增加了GB/T 31500-2015、GA/T 1713-2020、SF/T 0076-2020、SF/T 0077-2020四个标准</li>
+<li>2021年3月9日更新内容：增加了GB/T 39321-2020和SF/T 0075—2020两个标准</li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/dd:dc3dd(linux)/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  1磁盘镜像
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%B7%A5%E5%85%B7%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94%E8%A1%A8/">
+                2磁盘挂载
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2016-<span id="footerYear"></span> 
+	<a href="/">x7</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

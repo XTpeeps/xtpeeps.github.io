@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Clonezilla | 
+	 
+	x7peeps
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="keywords" />
+	 
+		<meta name="description" content="description" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="x7peeps" type="application/atom+xml">
+</head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">x7peeps</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		
+		<li class="menu-item">
+			<a href="https://github.com/xtpeeps" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
+										工具-Coremail日志分析筛选简易脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
+										工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/03/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-%E6%9C%AC%E5%9C%B0%E6%89%B9%E9%87%8Fping%E5%9F%9F%E5%90%8D%E8%84%9A%E6%9C%AC/">
+										工具-本地批量ping域名脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x00电子取证标准
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x00%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/2.0%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/">
+										2.0电子取证标准
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x01现场勘查
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x01%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/">
+										现场勘查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x02电子取证
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1磁盘镜像
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/">
+										Clonezilla
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/19/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Datanumen_disk_image/">
+										Datanumen_disk_image
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/EnCase_forensic_imager/">
+										EnCase_forensic_imager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/GetdataForensicImager/">
+										GetdataForensicImager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Guymager/">
+										Guymager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/dd:dc3dd(linux)/">
+										dd:dc3dd(linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/%E9%95%9C%E5%83%8F%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%90%84%E4%BA%A7%E5%93%81%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94/">
+										镜像类型及各产品特性对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2磁盘挂载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/Arsenal_Image_Mounter/">
+										Arsenal_Image_Mounter
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/13/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/GetData_Mount_Image_Pro/">
+										GetData_Mount_Image_Pro
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/OSFMount/">
+										OSFMount
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/mount_command/">
+										mount_command
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%B7%A5%E5%85%B7%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94%E8%A1%A8/">
+										磁盘挂载工具特点对比表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3文件恢复
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/DiskGenius(win)/">
+										DiskGenius(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/UFS%20explorer%20professional%20recovery(win:mac:linux)/">
+										UFS explorer professional recovery(win:mac:linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/WinHEX(win)/">
+										WinHEX(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/">
+										数据恢复工具性能对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4系统信息收集
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%9B%BD%E6%A0%87%E4%B8%AD%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E7%9B%B8%E5%85%B3%E8%A6%81%E6%B1%82%E5%8F%8A%E7%BB%BC%E8%BF%B0/">
+										国标中电子取证相关要求及综述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应关键证据检索提取
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE%E6%A3%80%E7%B4%A2%E6%8F%90%E5%8F%96/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
+										命令行历史记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										恶意样本分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/09/03/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-1-%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83/">
+										恶意样本分析-1-配置实验环境
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-2-%E5%9F%BA%E7%A1%80%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-2-基础静态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/20/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-3-%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-3-基础动态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-4-%E5%9F%BA%E7%A1%80DLL%E5%88%86%E6%9E%90/">
+										恶意样本分析-4-基础DLL分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-5-%E6%B1%87%E7%BC%96%E5%8F%8A%E5%8F%8D%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/">
+										恶意样本分析-5-汇编及反汇编基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/08/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-6-IDA%E4%BD%BF%E7%94%A8/">
+										恶意样本分析-6-IDA使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/23/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-AZORult%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%80%9F%E5%8A%A9%E9%82%AE%E4%BB%B6%E5%9C%A8%E9%87%8E%E4%BC%A0%E6%92%AD/">
+										样本分析-AZORult间谍软件借助邮件在野传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/12/12/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-TrojanBuzus%E2%80%9C%E9%9C%B8%E6%97%8F%E2%80%9D%E6%9C%A8%E9%A9%AC%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E4%BC%A0%E6%92%AD/">
+										样本分析-TrojanBuzus“霸族”木马通过邮件传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/13/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-%E9%82%AE%E4%BB%B6%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E4%B8%AD%E5%8F%91%E7%8E%B0%E6%96%B0MYMOOD%E8%A0%95%E8%99%AB%E4%BC%A0%E6%92%AD%E5%9C%B0%E5%9D%80/">
+										样本分析-邮件恶意样本中发现新MYMOOD蠕虫传播地址
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										情报跟踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/%E6%83%85%E6%8A%A5%E8%B7%9F%E8%B8%AA/%E6%83%85%E6%8A%A5-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies/">
+										情报-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										漏洞复现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/02/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2017-11882_Office%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%8F%8A%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/">
+										漏洞复现-CVE-2017-11882_Office远程代码执行漏洞及一点思考
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/13/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-0796_SMBGhost_Remote_Code_Execution/">
+										漏洞复现-CVE-2020-0796_SMBGhost_Remote_Code_Execution
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/07/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-14645_weblogic_T3%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E5%A4%8D%E6%B5%8B/">
+										漏洞复现-CVE-2020-14645_weblogic_T3反序列化RCE复测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/17/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-Vulhub%E5%AE%9E%E9%AA%8C_Weblogic_SSRF%E6%BC%8F%E6%B4%9E/">
+										漏洞复现-Vulhub实验_Weblogic_SSRF漏洞
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科普
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/10/%E7%A7%91%E6%99%AE/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%E4%B8%80%E5%AE%9A%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E5%BF%85%E5%81%9A%E4%BA%8B/">
+										手机丢失后一定要做的几件必做事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										红蓝对抗
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/02/20/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-Cobalt_Strike-x86_payload_%E5%88%86%E6%9E%90%E5%8F%8A%E6%B7%B7%E6%B7%86%E5%8A%A0%E5%AF%86/">
+										红蓝对抗-Cobalt_Strike-x86_payload_分析及混淆加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/08/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-%E5%90%8E%E6%B8%97%E9%80%8F_MYSQL%E6%8F%90%E6%9D%83%E5%B0%8F%E7%BB%93/">
+										红蓝对抗-后渗透_MYSQL提权小结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										页面篡改分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-EVAL%E5%8A%A0%E5%AF%86/">
+										页面篡改分析-EVAL加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-JS%E7%9A%84eval()%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-JS的eval()加密方式跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E5%9F%BA%E4%BA%8Esojson.v4%E6%B7%B7%E6%B7%86%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/">
+										页面篡改分析-基于sojson.v4混淆的页面篡思路分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E7%9F%AD%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%BA%A7%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-短链接多级跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%87%8D%E5%AE%9A%E5%90%91%E7%AF%A1%E6%94%B9%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90%E5%8F%8A%E5%9B%9E%E6%BA%AF%E8%BF%87%E7%A8%8B/">
+										页面篡改分析-重定向篡改事件的分析及回溯过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%A6%96%E6%AC%A1%E4%BC%9A%E8%AF%9D%E8%B7%B3%E8%BD%AC%E8%8F%A0%E8%8F%9C%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/">
+										页面篡改分析-首次会话跳转菠菜页面篡改分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/11/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90%E4%B8%80%E5%A4%84BoCai%E9%A1%B5%E9%9D%A2/">
+										页面篡改分析一处BoCai页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/11/%E7%BC%96%E7%A8%8B/python/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/">
+										scrapy爬虫框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Clonezilla
+</h1>
+<div class="article-meta">
+	
+	<span>x7</span>
+	<span>2021-03-16 17:33:14</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<p>Clonezilla：<a target="_blank" rel="noopener" href="https://clonezilla.org/">https://clonezilla.org/</a> 多平台的分区和磁盘克隆程序。</p>
+<p>Clonezilla是一个分区和磁盘成像/克隆程序，类似于True Image®或Norton Ghost®。帮助您进行系统部署、裸金属备份和恢复。Clonezilla有三种类型:Clonezilla live、Clonezilla lite server和Clonezilla SE(服务器版)。Clonezilla live适用于单机备份和恢复。虽然Clonezilla lite server或SE是用于大规模部署的，但它可以同时克隆许多(40多台!)计算机。Clonezilla只保存和恢复硬盘中使用过的块。这提高了克隆效率。在42节点集群中的一些高端硬件中，理论可达8gb/min速率恢复速率。</p>
+<span id="more"></span>
+
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li><p>支持许多文件系统:</p>
+</li>
+<li><ul>
+<li>(1)ext2、ext3, ext4, reiserfs, reiser4, xfs、jfs, btrfs, f2fs nilfs2 GNU / Linux, </li>
+<li>(2) FAT12, FAT16, FAT32, NTFS Windows,</li>
+<li>(3)HFS + Mac OS, </li>
+<li>(4) UFS FreeBSD, NetBSD, OpenBSD, </li>
+<li>(5) minix minix, </li>
+<li>(6) VMFS3 VMFS5 VMWare ESX。</li>
+</ul>
+</li>
+</ul>
+<p>因此，无论32位(x86)操作系统还是64位(x86-64)操作系统，都可以克隆GNU/Linux、MS windows、intel Mac OS、FreeBSD、NetBSD、OpenBSD、Minix、VMWare ESX、Chrome OS/Chromium操作系统。对于这些文件系统，<strong>Partclone只保存和恢复分区中使用过的块。对于不支持的文件系统，在Clonezilla中，扇区到扇区的复制是由dd完成的。</strong></p>
+<ul>
+<li>支持GNU/Linux下的LVM2 (LVM版本1不支持)。</li>
+<li>可以重新安装引导加载程序，包括grub(版本1和版本2)和syslinux。</li>
+<li>支持MBR和GPT分区格式的硬盘驱动器。Clonezilla live也可以在BIOS或uEFI机器上启动。</li>
+<li>支持无人值守模式。几乎所有的步骤都可以通过命令和选项来完成。您还可以使用许多引导参数来定制您自己的映像和克隆。</li>
+<li>支持一个映像恢复到多个本地设备。</li>
+<li>镜像可以被加密。这是通过ecryptfs完成的，这是一种符合posix的企业加密堆叠文件系统。</li>
+<li>Clonezilla SE支持多播，适合大规模克隆。如果您的客户端支持PXE和局域网唤醒，您也可以远程使用它来保存或恢复一堆计算机。</li>
+<li>Clonezilla lite服务器支持BT (Bittorrent)，适合大规模部署。BT模式的工作由Ezio完成。</li>
+<li>映像文件可以在本地磁盘、ssh服务器、samba服务器、NFS服务器或WebDAV服务器上。</li>
+<li>AES-256加密可用于保护数据的访问、存储和传输。</li>
+<li>基于Partclone(默认)、Partimage(可选)、ntfsclone(可选)、dd对分区进行镜像或克隆。然而，包含其他一些程序的Clonezilla不仅可以保存和恢复分区，还可以保存和恢复整个磁盘。</li>
+<li>通过使用我们自己开发的另一款免费软件drbl-winroll，可以自动更改克隆的MS windows机器的主机名、组名和SID。</li>
+</ul>
+<h2 id="最小运行环境"><a href="#最小运行环境" class="headerlink" title="最小运行环境"></a>最小运行环境</h2><p>Clonezilla live所需最小系统环境：</p>
+<p>处理器为X86或X86 -64</p>
+<p>196mb系统内存(RAM)</p>
+<p>启动设备，如CD/DVD驱动器、USB端口、PXE或硬盘驱动器</p>
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><ul>
+<li>目标分区必须等于或大于源分区。</li>
+<li>差异/增量备份尚未实现。</li>
+<li>在线成像/克隆还没有实现。必须卸载要映像或克隆的分区。</li>
+<li>由于图像格式的限制，无法探索或装入图像。您可以从映像中恢复单个文件。但是，您仍然有办法做到这一点，请阅读本文。</li>
+<li>恢复Clonezilla live与多个cd或dvd还没有实现。现在，如果你选择创建恢复iso文件，所有的文件都必须在一个CD或DVD中。</li>
+</ul>
+<h2 id="Clonezilla版本"><a href="#Clonezilla版本" class="headerlink" title="Clonezilla版本"></a>Clonezilla版本</h2><ul>
+<li><strong>Clonezilla Live:</strong> Clonezilla Live允许你使用CD/DVD或USB闪存驱动器引导和运行Clonezilla(仅提供单播)</li>
+<li>**Clonezilla lite服务器:**Clonezilla lite服务器允许你使用Clonezilla live进行大规模克隆(支持单播，广播，多播，bt)</li>
+<li><strong>Clonezilla SE:</strong> DRBL包含了Clonezilla SE，因此为了使用Clonezilla进行大规模克隆(支持单播、广播和组播)，必须首先建立DRBL服务器。</li>
+</ul>
+<p>这里因为日常使用的clonezille live会比较多这里主要介绍live。</p>
+<h2 id="Clonezilla-Live及其使用"><a href="#Clonezilla-Live及其使用" class="headerlink" title="Clonezilla Live及其使用"></a>Clonezilla Live及其使用</h2><p><a target="_blank" rel="noopener" href="https://clonezilla.org/clonezilla-live.php">https://clonezilla.org/clonezilla-live.php</a></p>
+<p>Clonezilla Live是一个针对x86/amd64 (x86-64)计算机的小型可引导GNU/Linux发行版。Clonezilla SE(服务器版)从2004年开始开发，用于同时部署多台计算机。这是一个非常有用的工具，但是它也有一些限制。为了使用它，您必须首先准备一个DRBL服务器，并且要部署的机器必须从网络启动(例如PXE/iPXE)。</p>
+<h3 id="如何安装Clonezilla-Live"><a href="#如何安装Clonezilla-Live" class="headerlink" title="如何安装Clonezilla Live"></a>如何安装Clonezilla Live</h3><p>要安装Clonezilla live，基本步骤是下载预构建的Clonezilla live，然后将其放入引导介质(CD、USB闪存驱动器或USB硬盘驱动器)。有两种类型的文件可用，iso和zip。前者用于CD，后者用于USB闪存驱动器。此外，您还可以将Clonezilla放在硬盘驱动器或PXE服务器上。</p>
+<ul>
+<li>CD / DVD:</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://clonezilla.org/downloads.php">下载一个ISO文件光盘/DVD</a>。然后你可以烧录文件CD / DVD与任何烧程序,这种K3b GNU / Linux或InfraRecorder女士的窗户,和记得选择“烧录镜像”的燃录到CD, 该CD可以用来引导机器启动镜像或克隆。在这里可以找到关于使用InfraRecorder<a target="_blank" rel="noopener" href="https://clonezilla.org/fine-print-live-doc.php?path=./clonezilla-live/doc/09_Burn_Clonezilla_live_CD/00-create-clonezilla-live-cd.doc#00-create-clonezilla-live-cd.doc">创建Clonezilla live CD的分步文档</a>。</p>
+<ul>
+<li>USB闪存驱动器或USB硬盘:</li>
+</ul>
+<p>要把Clonezilla放到u盘或u盘上，请查看<a target="_blank" rel="noopener" href="https://clonezilla.org/liveusb.php">这个文档</a>。</p>
+<ul>
+<li>硬盘:</li>
+</ul>
+<p>要将Clonezilla安装在已经安装了操作系统的硬盘上，请检查<a target="_blank" rel="noopener" href="https://clonezilla.org/livehd.php">这个文档</a>。</p>
+<ul>
+<li>PXE服务器:</li>
+</ul>
+<p>要将Clonezilla运行在PXE服务器上并通过PXE引导您的客户机，请检查<a target="_blank" rel="noopener" href="https://clonezilla.org/livepxe.php">这个文档</a>。</p>
+<p>如果您有兴趣从头创建Clonezilla live iso或zip文件，请检查<a target="_blank" rel="noopener" href="https://clonezilla.org/create_clonezilla_live_from_scratch.php">这个文档</a>。//创建Clonezilla live 2.x!</p>
+<h3 id="如何使用Clonezilla-Live"><a href="#如何使用Clonezilla-Live" class="headerlink" title="如何使用Clonezilla Live"></a>如何使用Clonezilla Live</h3><blockquote>
+<p>Please refer to <a target="_blank" rel="noopener" href="https://clonezilla.org/clonezilla-usage/clonezilla-live-usage.php">this doc</a> for more details. 官方文档</p>
+</blockquote>
+<p>下面是官方手册（已翻译）：</p>
+<p>下面是Clonezilla Live启动的菜单：</p>
+<img src="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/1615884344593-e06d8925-a7c9-4664-ae82-f09595b76f7b.png" class="" title="image.png">
+
+
+
+<p>第一个页面是Clonezilla Live默认的模式界面，它将默认为分辨率为1024x768的帧缓冲模式。</p>
+<p>在第二选项“Other modes of Clonezilla live”中还有更多的模式可供选择，如:800X600或640x480，如果你愿意，如下图所示:</p>
+<img src="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/1615884698663-4d94c306-4b7a-4044-977b-e393b325e02c.png" class="" title="image.png">
+
+
+
+<ul>
+<li><p>选择“Clonezilla live (To RAM。引导介质可以稍后删除)，与第一个相同的功能，不同的是当Clonezilla live引导完成时，所有必要的文件被复制到内存，可以移除启动介质(CD或u盘)。</p>
+</li>
+<li><p>如果您不需要中文或日文版环境，或者您的计算机在帧缓冲模式下遇到问题，您可以选择“Clonezilla Live (no framebuffer)”在英文环境中克隆。</p>
+</li>
+<li><p>选择“Clonezilla live(故障安全模式)”，是为了当你不能启动你的机器时出现问题，比如你的机器的ACPI在内核中不受支持。</p>
+</li>
+<li><p>如果你想在你的硬盘上启动本地操作系统，你可以选择“本地操作系统在硬盘(如果可用)”。这是引导介质中的一个额外功能，与Clonezilla Live没有任何关系。</p>
+</li>
+<li><p>选择“FreeDOS”，可以让你引导你的机器进入自由 DOS。这是引导介质中的一个额外功能，与Clonezilla Live没有任何关系。</p>
+</li>
+<li><p>选择“使用Memtest86+进行内存测试”是为了使用Memtest86+进行内存测试。这是引导介质中的一个额外功能，与Clonezilla Live没有任何关系。</p>
+</li>
+<li><p>选择“通过etherboot进行网络引导”或“通过gpxe进行网络引导”，可以通过etherboot或gpxe进行网络引导。如果您的计算机没有PXE网络，您可以使用它从网络引导。这是引导介质中的一个额外功能，与Clonezilla Live没有任何关系。</p>
+</li>
+<li><ul>
+<li>在选择语言和键映射之后，首先会提示您分配映像存储库，它可以是本地磁盘、ssh服务器、nfs服务器、samba服务器(网络邻居)或任何可以作为/home/ partimag挂载的文件系统。一旦存储库就绪，您就可以继续保存或恢复映像。请按照屏幕上的说明操作。关于Clonezilla live的两个主要截图:</li>
+</ul>
+</li>
+</ul>
+<img src="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/1615885277201-03ad9f23-ae1a-40db-9633-e232105f4274.png" class="" title="image.png">
+
+<p>///注意/// <strong>Clonezilla镜像名实际上就是目录名</strong>。例如，如果你将镜像名命为2007-05-NOVISTA，所有的信息将会被保存在/home/partimag/2007-05-NOVISTA/目录中。MBR引导,切分表以及以及切分文件都会被储存。因此当你想要还原镜像的时候，应挂载/home/partimag到对应磁盘和路径，/home/partimag/这个目录下，并且还要有2007-05-NOVISTA目录。</p>
+<img src="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/1615886364343-a1953fd6-029e-4793-9782-1b416d578bc1.png" class="" title="image.png">Clonezilla Live prepare ocsroot菜单
+
+
+
+<p>[专家模式]如果你想手动挂载clonezilla image home (/home/partimag)，遵循以下步骤:</p>
+<ol>
+<li>运行“sudo su -”成为root。</li>
+<li>您必须准备另一个可写的设备或空间，并将其挂载为/home/partimag(注意!如果你的引导媒体是可写的,如USB闪存驱动器或您选择使用内存选项,已有/home/partimag与/live_media /home /partimag,你必须删除该文件,并创建一个目录/home/partimag作为挂载点“rm - f /home/partimag;mkdir - p /home/partimag)。例如，如果你想使用Clonezilla来保存/dev/hda，并将映像放在/dev/hdb1中，那么你必须通过“mount -t auto /dev/hdb1 /home/partimag”将/dev/hdb1挂载为/home/partimag。</li>
+</ol>
+<p>如果/dev/hdb1的文件系统是ntfs，你必须使用”ntfs-3g /dev/hdb1 /home/partimag”来挂载它，这样它就可以写了。请记住，还支持sshfs和smbfs。例如，使用sshfs，你可以挂载你的远程ssh服务器:</p>
+<pre><code>sshfs ACCOUNT@SSH_SERVER: / ABSOLUTE_PATH /home/partimag
+</code></pre>
+<p>例如，如果你想挂载你的ssh服务器192.168.100.254目录/work/pool，像这样运行:</p>
+<pre><code>/home/partimag sshfs root@192.168.100.254: /home/partimag
+</code></pre>
+<p>如果你想用目录/work/smb挂载你的samba服务器192.168.200.254，像这样运行:</p>
+<pre><code>mount -t cifs -o user=your_user_name //192.168.200.254/work/smb /home/partimag . conf . mount -t cifs -o user=your_user_name //192.168.200.254/work/smb /home/partimag . conf
+</code></pre>
+<p>如果您想用目录/work/smb挂载samba服务器192.168.200.254，用户名为“administrator”，密码为“pass”，请像这样运行:</p>
+<pre><code>mount -t cifs -o user=administrator,password=pass //192.168.200.254/work/smb /home/partimag . mount -t cifs -o user=administrator,password=pass
+</code></pre>
+<p>///说明///上述命令中，<strong>Linux下不使用smbfs，**</strong>LINUX下**<strong>使用cifs协议，cifs协议对windows MS文件共享的兼容性更好**</strong>。当您使用smbfs时，Clonezilla live将无法保存正确的镜像!**</p>
+<ol>
+<li>运行“clonezilla”来使用clonezilla，然后按照屏幕上的说明操作。</li>
+</ol>
+<h3 id="更多文章示例"><a href="#更多文章示例" class="headerlink" title="更多文章示例"></a>更多文章示例</h3><p><a target="_blank" rel="noopener" href="http://clonezilla.nchc.org.tw/related_article/">http://clonezilla.nchc.org.tw/related_article/</a></p>
+<h3 id="通过视频学习了解clonezilla使用"><a href="#通过视频学习了解clonezilla使用" class="headerlink" title="通过视频学习了解clonezilla使用"></a>通过视频学习了解clonezilla使用</h3><p>通过视频学习如何使用clonezilla：</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=cEE_vn8E0Kk">https://www.youtube.com/watch?v=cEE_vn8E0Kk</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=clonezilla">https://www.youtube.com/results?search_query=clonezilla</a></p>
+<p>相关视频链接</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=mipCOMqirF0">Backup with Clonezilla | LAS | s25e10</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=LS6VhLDw-io">How To Backup AND Restore you Computer with CloneZilla! (BEST HD Tutorial!!)</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=YzxL95GmmYk">Disk to Disk Copy with Clonezilla</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=raYLbjQVCy4">How to Do a System Backup Using Clonezilla</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=kTc1x5DFfig">How to use CloneZilla Tutorial (Making an image file and copying it to another computer)</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.youtube.com/watch?v=gJKv6NSKMAU">Clonezilla - Backup Linux/Ubuntu System</a></li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/-4eGUynyEvI">Clonezilla video tutorial (italian)</a></li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/03/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Guymager/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Guymager
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/GetdataForensicImager/">
+                GetdataForensicImager
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2016-<span id="footerYear"></span> 
+	<a href="/">x7</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

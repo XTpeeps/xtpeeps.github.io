@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		命令行历史记录 | 
+	 
+	x7peeps
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="keywords" />
+	 
+		<meta name="description" content="description" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="x7peeps" type="application/atom+xml">
+</head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">x7peeps</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		
+		<li class="menu-item">
+			<a href="https://github.com/xtpeeps" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
+										工具-Coremail日志分析筛选简易脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
+										工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/03/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-%E6%9C%AC%E5%9C%B0%E6%89%B9%E9%87%8Fping%E5%9F%9F%E5%90%8D%E8%84%9A%E6%9C%AC/">
+										工具-本地批量ping域名脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x00电子取证标准
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x00%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/2.0%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E6%A0%87%E5%87%86/">
+										2.0电子取证标准
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x01现场勘查
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x01%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/%E7%8E%B0%E5%9C%BA%E5%8B%98%E6%9F%A5/">
+										现场勘查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0x02电子取证
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1磁盘镜像
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Clonezilla/">
+										Clonezilla
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/19/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Datanumen_disk_image/">
+										Datanumen_disk_image
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/EnCase_forensic_imager/">
+										EnCase_forensic_imager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/16/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/GetdataForensicImager/">
+										GetdataForensicImager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/Guymager/">
+										Guymager
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/dd:dc3dd(linux)/">
+										dd:dc3dd(linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/22/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/1%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F/%E9%95%9C%E5%83%8F%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%90%84%E4%BA%A7%E5%93%81%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94/">
+										镜像类型及各产品特性对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2磁盘挂载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/Arsenal_Image_Mounter/">
+										Arsenal_Image_Mounter
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/13/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/GetData_Mount_Image_Pro/">
+										GetData_Mount_Image_Pro
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/OSFMount/">
+										OSFMount
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/mount_command/">
+										mount_command
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/2%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD/%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%B7%A5%E5%85%B7%E7%89%B9%E7%82%B9%E5%AF%B9%E6%AF%94%E8%A1%A8/">
+										磁盘挂载工具特点对比表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3文件恢复
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/DiskGenius(win)/">
+										DiskGenius(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/UFS%20explorer%20professional%20recovery(win:mac:linux)/">
+										UFS explorer professional recovery(win:mac:linux)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/WinHEX(win)/">
+										WinHEX(win)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/">
+										数据恢复工具性能对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4系统信息收集
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%9B%BD%E6%A0%87%E4%B8%AD%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E7%9B%B8%E5%85%B3%E8%A6%81%E6%B1%82%E5%8F%8A%E7%BB%BC%E8%BF%B0/">
+										国标中电子取证相关要求及综述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										应急响应关键证据检索提取
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE%E6%A3%80%E7%B4%A2%E6%8F%90%E5%8F%96/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/">
+										命令行历史记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										恶意样本分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/09/03/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-1-%E9%85%8D%E7%BD%AE%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83/">
+										恶意样本分析-1-配置实验环境
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-2-%E5%9F%BA%E7%A1%80%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-2-基础静态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/20/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-3-%E5%9F%BA%E7%A1%80%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">
+										恶意样本分析-3-基础动态分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-4-%E5%9F%BA%E7%A1%80DLL%E5%88%86%E6%9E%90/">
+										恶意样本分析-4-基础DLL分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/25/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-5-%E6%B1%87%E7%BC%96%E5%8F%8A%E5%8F%8D%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80/">
+										恶意样本分析-5-汇编及反汇编基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/08/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-6-IDA%E4%BD%BF%E7%94%A8/">
+										恶意样本分析-6-IDA使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/23/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-AZORult%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6%E5%80%9F%E5%8A%A9%E9%82%AE%E4%BB%B6%E5%9C%A8%E9%87%8E%E4%BC%A0%E6%92%AD/">
+										样本分析-AZORult间谍软件借助邮件在野传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/12/12/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-TrojanBuzus%E2%80%9C%E9%9C%B8%E6%97%8F%E2%80%9D%E6%9C%A8%E9%A9%AC%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E4%BC%A0%E6%92%AD/">
+										样本分析-TrojanBuzus“霸族”木马通过邮件传播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/13/%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90/%E6%A0%B7%E6%9C%AC%E5%88%86%E6%9E%90-%E9%82%AE%E4%BB%B6%E6%81%B6%E6%84%8F%E6%A0%B7%E6%9C%AC%E4%B8%AD%E5%8F%91%E7%8E%B0%E6%96%B0MYMOOD%E8%A0%95%E8%99%AB%E4%BC%A0%E6%92%AD%E5%9C%B0%E5%9D%80/">
+										样本分析-邮件恶意样本中发现新MYMOOD蠕虫传播地址
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										情报跟踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/04/04/%E6%83%85%E6%8A%A5%E8%B7%9F%E8%B8%AA/%E6%83%85%E6%8A%A5-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies/">
+										情报-Chinese_Hackers_Target_Satellite,Geospatial_Imaging,Defense_Companies
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										漏洞复现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/02/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2017-11882_Office%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%8F%8A%E4%B8%80%E7%82%B9%E6%80%9D%E8%80%83/">
+										漏洞复现-CVE-2017-11882_Office远程代码执行漏洞及一点思考
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/13/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-0796_SMBGhost_Remote_Code_Execution/">
+										漏洞复现-CVE-2020-0796_SMBGhost_Remote_Code_Execution
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/07/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-CVE-2020-14645_weblogic_T3%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96RCE%E5%A4%8D%E6%B5%8B/">
+										漏洞复现-CVE-2020-14645_weblogic_T3反序列化RCE复测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/17/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0-Vulhub%E5%AE%9E%E9%AA%8C_Weblogic_SSRF%E6%BC%8F%E6%B4%9E/">
+										漏洞复现-Vulhub实验_Weblogic_SSRF漏洞
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										科普
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/10/%E7%A7%91%E6%99%AE/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%E4%B8%80%E5%AE%9A%E8%A6%81%E5%81%9A%E7%9A%84%E5%87%A0%E4%BB%B6%E5%BF%85%E5%81%9A%E4%BA%8B/">
+										手机丢失后一定要做的几件必做事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										红蓝对抗
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/02/20/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-Cobalt_Strike-x86_payload_%E5%88%86%E6%9E%90%E5%8F%8A%E6%B7%B7%E6%B7%86%E5%8A%A0%E5%AF%86/">
+										红蓝对抗-Cobalt_Strike-x86_payload_分析及混淆加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/08/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97-%E5%90%8E%E6%B8%97%E9%80%8F_MYSQL%E6%8F%90%E6%9D%83%E5%B0%8F%E7%BB%93/">
+										红蓝对抗-后渗透_MYSQL提权小结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										页面篡改分析
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-EVAL%E5%8A%A0%E5%AF%86/">
+										页面篡改分析-EVAL加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-JS%E7%9A%84eval()%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-JS的eval()加密方式跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E5%9F%BA%E4%BA%8Esojson.v4%E6%B7%B7%E6%B7%86%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/">
+										页面篡改分析-基于sojson.v4混淆的页面篡思路分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E7%9F%AD%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%BA%A7%E8%B7%B3%E8%BD%AC/">
+										页面篡改分析-短链接多级跳转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%87%8D%E5%AE%9A%E5%90%91%E7%AF%A1%E6%94%B9%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%88%86%E6%9E%90%E5%8F%8A%E5%9B%9E%E6%BA%AF%E8%BF%87%E7%A8%8B/">
+										页面篡改分析-重定向篡改事件的分析及回溯过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E9%A6%96%E6%AC%A1%E4%BC%9A%E8%AF%9D%E8%B7%B3%E8%BD%AC%E8%8F%A0%E8%8F%9C%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/">
+										页面篡改分析-首次会话跳转菠菜页面篡改分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/11/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90%E4%B8%80%E5%A4%84BoCai%E9%A1%B5%E9%9D%A2/">
+										页面篡改分析一处BoCai页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/11/%E7%BC%96%E7%A8%8B/python/scrapy%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/">
+										scrapy爬虫框架
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	命令行历史记录
+</h1>
+<div class="article-meta">
+	
+	<span>x7</span>
+	<span>2021-04-30 23:08:51</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="linux下命令行历史记录"><a href="#linux下命令行历史记录" class="headerlink" title="linux下命令行历史记录"></a>linux下命令行历史记录</h1><p><strong>原理的解释</strong></p>
+<p>这里参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/bpzblog/p/13121930.html">白<em>胖</em>子</a>关于linux命令行history的解释，其中概述对history的原理解释的比较通俗易懂，这里引用过来：</p>
+<ul>
+<li>当执行命令后，系统默认会在内存记录执行过的命令</li>
+<li>当用户正常退出时，会将内存的命令历史存放对应历史文件中，默认是~/.bash_history</li>
+<li>登录shell时，会读取命令历史文件中记录下的命令加载到内存中</li>
+<li>登录进shell后新执行的命令只会记录在内存的缓存区中；这些命令会用户正常退出时“追加”至命令历史文件中</li>
+<li>利用命令历史。可以用它来重复执行命令，提高输入效率</li>
+</ul>
+<p><strong>bash history内建函数</strong></p>
+<p>bash提供两个内置命令操纵历史记录列表和历史记录文件。</p>
+<h2 id="fc命令"><a href="#fc命令" class="headerlink" title="fc命令"></a>fc命令</h2><pre><code>fc [-e ename] [-lnr] [first] [last]
+fc -s [pat=rep] [command]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>-e&lt;文本编辑器&gt;</th>
+<th>指定用来编辑命令的文本编辑器，默认是vi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-l</td>
+<td>列出第一条和最后一条命令范围内的历史命令，如果不跟命令范围则默认显示最近使用过的16条历史命令</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>显示历史命令时不显示命令序号</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>反序显示所有历史命令</td>
+</tr>
+<tr>
+<td>-s&lt;命令名&gt;</td>
+<td>从历史命令中当前位置往前找到指定命令，并执行</td>
+</tr>
+</tbody></table>
+<pre><code>显示历史命令列表（默认打印最近的16条历史命令）：
+fc -l
+
+显示历史命令列表 1-99行：
+fc -l 1 99
+
+指定使用ex文本编辑器编辑命令：
+fc -e ex
+
+显示历史命令列表但不显示命令序号：
+fc -n
+
+反序显示所有历史命令：
+fc -r
+
+从历史命令中找到find命令，并执行：
+fc -s find
+</code></pre>
+<blockquote>
+<p>EXTENDED_HISTORY环境变量影响fc命令的执行，如果变量设置为ON，则记录时间，否则不记录时间。在/etc/profile中添加export EXTENDED_HISTORY=ON 即可开启命令时间记录。</p>
+<p>kali：因为shell是zsh，因此配置在/etc/zsh/zshrc  </p>
+</blockquote>
+<h2 id="history命令"><a href="#history命令" class="headerlink" title="history命令"></a>history命令</h2><pre><code>history [-c] [-d offset] [n] 
+history -awrn [filename] 
+history -ps arg [arg...]
+history [n]  n为数字，列出最近的n条命令
+-c  将目前shell中的所有history命令消除
+history [-raw] histfiles
+-a 将目前新增的命令写入histfiles, 默认写入~/.bash_history
+-r  将histfiles内容读入到目前shell的history记忆中
+-w 将目前history记忆的内容写入到histfiles
+-s: 展开历史参数成一行，附加在历史列表后。用于伪造命令历史
+
+
+
+使用! 执行历史命令。
+! number 执行第几条命令
+! command 从最近的命令查到以command开头的命令执行
+!! 执行上一条
+</code></pre>
+<blockquote>
+<p><strong>history的历史命令保存在~/.bash_history 文件中.</strong></p>
+</blockquote>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><p><strong>history配置修改</strong></p>
+<p>配置文件：/etc/profile 与history相关的环境变量</p>
+<ul>
+<li>history相关配置说明</li>
+</ul>
+<pre><code>HISTFILE          指定存放历史文件位置，默认位置在~/.bash_profile（针对用户）、 
+      /etc/profile(针对全局，如果~/.bash_profile内没有相关环境变量内容则使用全局变量设置) 
+HISTFILESIZE      命令历史文件记录历史的条数 
+HISTSIZE          命令历史记录的条数，默认为1000 
+HISTTIMEFORMAT=&quot;%F %T&quot;  显示命令发生的时间 
+HISTIGNORE=&quot;str1:str2:...&quot; 忽略string1,string2历史 
+HISTCONTROL      包含一下4项，让哪一项生效只需要让其=下面一项即可 
+ignoredups:  忽略重复的命令；连续且相同方为“重复” 
+ignorespace:  忽略所有以空白开头的命令 
+ignoreboth:ignoredups,ignorespace 
+erasedups:    删除重复命令
+</code></pre>
+<ul>
+<li>history记录命令时间戳</li>
+</ul>
+<pre><code>在.bashrc 或者/etc/profile文件中添加几行配置即可
+          HISTFILESIZE=2000
+          HISTSIZE=2000
+         HISTTIMEFORMAT=&quot;%F %T &quot;
+        export HISTTIMEFORMAT
+
+设置好之后，执行history命令，就会显示每条历史命令的详细执行时
+</code></pre>
+<p>本节参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u011498933/article/details/99541059">https://blog.csdn.net/u011498933/article/details/99541059</a></p>
+<p><a target="_blank" rel="noopener" href="https://linux265.com/course/linux-command-fc.html">https://linux265.com/course/linux-command-fc.html</a></p>
+<h1 id="windows下命令行历史记录"><a href="#windows下命令行历史记录" class="headerlink" title="windows下命令行历史记录"></a>windows下命令行历史记录</h1><h2 id="doskey命令"><a href="#doskey命令" class="headerlink" title="doskey命令"></a>doskey命令</h2><p>该命令用于调用和建立DOS<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AE%8F%E5%91%BD%E4%BB%A4">宏命令</a></p>
+<pre><code>doskey [/reinstall] [/listsize=&lt;Size&gt;] [/macros:[all | &lt;ExeName&gt;] [/history] [/insert | /overstrike] [/exename=&lt;ExeName&gt;] [/macrofile=&lt;FileName&gt;] [&lt;MacroName&gt;=[&lt;Text&gt;]]
+
+
+/reinstall                              清空命令历史缓冲区并重新安装doskey
+/listsize=&lt;Size&gt;                指定历史缓冲区的命令行数目
+/macros                                 显示doskey宏，需要使用重定向符号“&gt;”将宏重新存储到一个文件中，该参数可以简写为/m
+/macros:all                         为所有可执行文件显示doskey宏
+/macros:&lt;ExeName&gt;               为指定的exe文件名称显示所有可执行宏
+/history                                    显示存储在内存中的命令，可以使用重定向符号“&gt;”将宏重新存储到一个文件中，该参数可以简写为/h
+[/insert | /overstrike]     指定是否将你输入的文本插入或覆盖，如果使用/insert参数，你输入的文本将插入到已存在的文本中。如果使用/overwrite参数，新输入的文本将覆盖存在的文本，默认参数问/overwrite。
+/exename=&lt;ExeName&gt;              指定允许宏的可执行文件名称
+/macrofile=&lt;FileName&gt;           指定你想要安装的包含宏的文件
+&lt;MacroName&gt;=[&lt;Text&gt;]            创建由Text指定的命令的宏，MacroName指定宏的名称，Text指定你想要录制的命令，如果Text留空，则删除MacroName。 [1] 
+</code></pre>
+<p>doskey /history</p>
+<blockquote>
+<p>需要注意的是：doskey 只能查看当前shell对话框中的命令历史记录，无法查看其他shell对话框中的历史记录</p>
+</blockquote>
+<h2 id="快捷键命令"><a href="#快捷键命令" class="headerlink" title="快捷键命令"></a>快捷键命令</h2><p>F7快捷键查看所有执行过的命令</p>
+<p>F3：调出上一条执行过的命令，调出后直接回车即可执行；</p>
+<p>F8：搜索命令历史记录，和↑向上箭头类似。</p>
+<p>F9：按编号选择命令，来调出执行过的命令：</p>
+<p>命令号码在使用F7查看的时候可看到命令前边的数字即为命令号码，但是F7快捷键有个弊端，就是如果命令比较长就会显示不完全，分辨不出来命令的不同</p>
+<p>本节参考：</p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/doskey/10520881?fr=aladdin">https://baike.baidu.com/item/doskey/10520881?fr=aladdin</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753867(v=ws.10)?redirectedfrom=MSDN">https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753867(v=ws.10)?redirectedfrom=MSDN</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lishuoboy/article/details/86605653">https://blog.csdn.net/lishuoboy/article/details/86605653</a></p>
+<h1 id="本文参考"><a href="#本文参考" class="headerlink" title="本文参考"></a>本文参考</h1><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Command_history">https://en.wikipedia.org/wiki/Command_history</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-History-Builtins">https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-History-Builtins</a></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/04/30/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%9B%BD%E6%A0%87%E4%B8%AD%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81%E7%9B%B8%E5%85%B3%E8%A6%81%E6%B1%82%E5%8F%8A%E7%BB%BC%E8%BF%B0/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/04/24/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/3%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/">
+                
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2016-<span id="footerYear"></span> 
+	<a href="/">x7</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
