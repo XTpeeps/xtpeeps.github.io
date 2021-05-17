@@ -728,13 +728,15 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
+			<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
 				<h2 class="index-title">
-					工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
+					工具-Coremail日志分析筛选简易脚本
 				</h2>
 				<div class="index-brief">
-					需求对于大量UnsafeHttpMethod类型漏洞一直苦于耗费时间，而几乎无产出，对于安全检测人员来说简直是浪费了不必要的时间，所以根据具体的几种常见的漏洞通过脚本的形式进行批量检测成为了最值得研究的。
-漏洞名称：启用了不安全的HTTP方法危险等级：中漏洞描述：Web服务器配置为允许使用危险的HT
+					方案这里全遍历文件，读取文件筛选匹配关键字整行另存新文件保存
+使用方法Usage: python3 CLA.py &lt;logfolders&gt; &lt;key&gt; &lt;output_filename&gt;
+
+logfolders  日志文件夹（测试环境下现场取的folder/fol
 					...
 				</div>
 			</a>
@@ -747,15 +749,13 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-Coremail%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%AD%9B%E9%80%89%E7%AE%80%E6%98%93%E8%84%9A%E6%9C%AC/">
+			<a href="/2020/01/08/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7-HttpMethod-UnsafeHttpMethod%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%E5%92%8C%E6%96%B9%E6%B3%95/">
 				<h2 class="index-title">
-					工具-Coremail日志分析筛选简易脚本
+					工具-HttpMethod-UnsafeHttpMethod漏洞检测思路和方法
 				</h2>
 				<div class="index-brief">
-					方案这里全遍历文件，读取文件筛选匹配关键字整行另存新文件保存
-使用方法Usage: python3 CLA.py &lt;logfolders&gt; &lt;key&gt; &lt;output_filename&gt;
-
-logfolders  日志文件夹（测试环境下现场取的folder/fol
+					需求对于大量UnsafeHttpMethod类型漏洞一直苦于耗费时间，而几乎无产出，对于安全检测人员来说简直是浪费了不必要的时间，所以根据具体的几种常见的漏洞通过脚本的形式进行批量检测成为了最值得研究的。
+漏洞名称：启用了不安全的HTTP方法危险等级：中漏洞描述：Web服务器配置为允许使用危险的HT
 					...
 				</div>
 			</a>
